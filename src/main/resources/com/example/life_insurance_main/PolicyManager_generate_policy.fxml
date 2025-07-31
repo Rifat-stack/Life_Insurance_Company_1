@@ -5,7 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="300" prefWidth="600" xmlns="http://javafx.com/javafx/23.0.1" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.GeneratePolicyReportController">
+<AnchorPane prefHeight="300" prefWidth="600" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.GeneratePolicyReportController">
 
     <children>
         <Label layoutX="180" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Generate Policy Report" />

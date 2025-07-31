@@ -34,6 +34,7 @@
                 <TableColumn fx:id="ARPrimiumTable" prefWidth="78.6666259765625" text="Primium" />
             </columns>
         </TableView>
-        <Label layoutX="308.0" layoutY="265.0" prefHeight="46.0" prefWidth="204.0" text="Show susses or error" />
+        <Label fx:id="Showmessage" layoutX="308.0" layoutY="265.0" prefHeight="46.0" prefWidth="204.0" text="Show susses or error" />
+      <Button layoutX="466.0" layoutY="252.0" onAction="#ShowallidButton" prefHeight="25.0" prefWidth="78.0" text="Show all id" />
     </children>
 </AnchorPane>
