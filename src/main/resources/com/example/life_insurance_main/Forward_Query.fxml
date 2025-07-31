@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane  prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.ForwardQueryController">
+    <children>
+        <Label layoutX="180" layoutY="20" text="Forward Policy Query" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <Label layoutX="50" layoutY="70" text="Customer ID:" />
+        <TextField fx:id="customerIdField" layoutX="200" layoutY="65" prefWidth="300"/>
+
+        <Label layoutX="50" layoutY="120" text="Customer Query:" />
+        <TextArea fx:id="queryField" layoutX="200" layoutY="115" prefWidth="300" prefHeight="80"/>
+
+        <Button text="Forward to Policy Manager" layoutX="200" layoutY="210" onAction="#handleForward"/>
+
+        <Label fx:id="confirmationLabel" layoutX="200" layoutY="260" textFill="green"/>
+    </children>
+</AnchorPane>

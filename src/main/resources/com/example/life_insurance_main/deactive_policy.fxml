@@ -5,9 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.project.DeactivatePolicyController"
-            prefWidth="600" prefHeight="300">
+<AnchorPane  prefWidth="600" prefHeight="300" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.project.DeactivatePolicyController">
 
     <children>
         <Label layoutX="180" layoutY="20" text="Deactivate Policy"

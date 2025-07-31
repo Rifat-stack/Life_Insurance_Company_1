@@ -6,9 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.project.AssignUnderwriterController"
-            prefWidth="600" prefHeight="320">
+<AnchorPane prefWidth="600" prefHeight="320" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml"  fx:controller="com.example.project.AssignUnderwriterController">
 
     <children>
         <Label layoutX="160" layoutY="20" text="Assign Underwriter"
