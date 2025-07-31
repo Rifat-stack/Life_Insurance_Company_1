@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.project.DefineNewRuleController"
+            prefWidth="600" prefHeight="320">
+
+    <children>
+        <Label layoutX="180" layoutY="20" text="Define New Rule"
+               style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <Label layoutX="50" layoutY="70" text="Rule Type:" />
+        <ComboBox fx:id="ruleTypeBox" layoutX="200" layoutY="65" prefWidth="250"/>
+
+        <Label layoutX="50" layoutY="120" text="Rule Value:" />
+        <TextField fx:id="ruleValueField" layoutX="200" layoutY="115" prefWidth="250"/>
+
+        <Button text="Validate Save" layoutX="200" layoutY="170" onAction="#handleSaveRule"/>
+        <Label fx:id="confirmationLabel" layoutX="200" layoutY="220" textFill="green"/>
+        <Button layoutX="27.0" layoutY="348.0" onAction="#backButton" text="Back" />
+        <Button layoutX="103.0" layoutY="348.0" onAction="#MainButton" text="Main" />
+    </children>
+</AnchorPane>
