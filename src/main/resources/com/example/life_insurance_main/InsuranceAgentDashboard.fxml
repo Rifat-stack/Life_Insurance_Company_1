@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="583.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.InsuranceAgent">
+<AnchorPane prefHeight="583.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.InsuranceAgentDashboard">
    <children>
       <Label layoutX="24.0" layoutY="14.0" prefHeight="20.0" prefWidth="160.0" text="Insurance Agent">
          <font>
