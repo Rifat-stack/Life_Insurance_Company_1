@@ -2,12 +2,12 @@ package com.example.life_insurance_main;
 
 import javafx.scene.control.Label;
 
-public class CustomerDashboard
+public class InsuranceAgent
 {
     @javafx.fxml.FXML
     private Label NameLabel;
     @javafx.fxml.FXML
-    private Label IdLabel;
+    private Label AgentLabel;
 
     @javafx.fxml.FXML
     public void initialize() {
