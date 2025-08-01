@@ -1,5 +1,7 @@
 package com.example.life_insurance_main;
 
+import javafx.scene.control.Label;
+
 public class InsuranceAgentDashboard
 {
     @javafx.fxml.FXML
