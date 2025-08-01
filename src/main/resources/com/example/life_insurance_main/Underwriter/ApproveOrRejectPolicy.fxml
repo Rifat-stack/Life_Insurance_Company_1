@@ -1,14 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.life_insurance_main.Underwriter.ApproveOrRejectPolicy"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="407.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Underwriter.ApproveOrRejectPolicy">
+   <children>
+      <Label layoutX="199.0" layoutY="14.0" text="Policy Applications Review">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="&lt;--" />
+      <Label layoutX="23.0" layoutY="66.0" text="Select Application:" />
+      <ComboBox layoutX="121.0" layoutY="62.0" prefHeight="25.0" prefWidth="201.0" promptText="List of pending applications" />
+      <Button layoutX="96.0" layoutY="100.0" mnemonicParsing="false" text="Load Application" />
+      <Label layoutX="34.0" layoutY="142.0" text="Applicant Info:" />
+      <Label layoutX="34.0" layoutY="172.0" text="Age: " />
+      <Label layoutX="34.0" layoutY="200.0" text="Health Status: " />
+      <Label layoutX="34.0" layoutY="228.0" text="Annual Income:" />
+      <Label layoutX="34.0" layoutY="255.0" text="Requested Coverage:" />
+      <Label layoutX="149.0" layoutY="172.0" text="Label" />
+      <Label layoutX="149.0" layoutY="200.0" text="Label" />
+      <Label layoutX="149.0" layoutY="228.0" text="Label" />
+      <Label layoutX="149.0" layoutY="255.0" text="Label" />
+      <Label layoutX="34.0" layoutY="292.0" text="Attached documents:" />
+      <CheckBox layoutX="149.0" layoutY="292.0" mnemonicParsing="false" text="Medical Report" />
+      <CheckBox layoutX="149.0" layoutY="321.0" mnemonicParsing="false" text="Income Proof" />
+      <CheckBox layoutX="149.0" layoutY="346.0" mnemonicParsing="false" text="Identity Document " />
+      <Button layoutX="97.0" layoutY="373.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="View Document" />
+      <Label layoutX="343.0" layoutY="66.0" text="Underwriting Rules Review:" />
+      <Button layoutX="418.0" layoutY="176.0" mnemonicParsing="false" text="Evaluate Rules" />
+      <TextArea layoutX="343.0" layoutY="87.0" prefHeight="85.0" prefWidth="242.0" text="System-generated summary or red flags:&#10;" />
+      <Label layoutX="343.0" layoutY="208.0" text="Select Action:" />
+      <RadioButton layoutX="421.0" layoutY="208.0" mnemonicParsing="false" text="Approve" />
+      <RadioButton layoutX="421.0" layoutY="236.0" mnemonicParsing="false" text="Reject" />
+      <RadioButton layoutX="421.0" layoutY="263.0" mnemonicParsing="false" text="Request Additional Info" />
+      <TextArea layoutX="343.0" layoutY="295.0" prefHeight="51.0" prefWidth="242.0" text="Optional Comments:&#10;" />
+      <Button layoutX="413.0" layoutY="360.0" mnemonicParsing="false" text="Submit Decision" />
+   </children>
 </AnchorPane>
