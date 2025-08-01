@@ -2,25 +2,40 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefWidth="600" prefHeight="320" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml"  fx:controller="com.example.project.AssignUnderwriterController">
+<AnchorPane prefHeight="512.0" prefWidth="650" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.AssignUnderwriterController">
 
     <children>
-        <Label layoutX="160" layoutY="20" text="Assign Underwriter"
-               style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        <Label layoutX="220" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Assign Underwriter" />
 
         <Label layoutX="50" layoutY="70" text="Application ID:" />
-        <TextField fx:id="applicationIdField" layoutX="200" layoutY="65" prefWidth="250"/>
+        <TextField fx:id="applicationIdField" layoutX="200" layoutY="65" prefHeight="25.0" prefWidth="175.0" />
 
-        <Label layoutX="50" layoutY="120" text="Underwriter:" />
-        <ComboBox fx:id="underwriterBox" layoutX="200" layoutY="115" prefWidth="250"/>
+        <Label layoutX="50.0" layoutY="150.0" text="Underwriter:" />
+        <ComboBox fx:id="underwriterBox" layoutX="200.0" layoutY="146.0" prefHeight="25.0" prefWidth="175.0" />
 
-        <Button text="Assign" layoutX="200" layoutY="170" onAction="#handleAssign"/>
-        <Label fx:id="resultLabel" layoutX="200" layoutY="220" textFill="blue"/>
-        <Button layoutX="27.0" layoutY="348.0" onAction="#backButton" text="Back" />
-        <Button layoutX="103.0" layoutY="348.0" onAction="#MainButton" text="Main" />
+        <Button layoutX="200.0" layoutY="184.0" onAction="#handleAssign" text="Assign" />
+        <Label fx:id="resultLabel" layoutX="200" layoutY="210" textFill="blue" />
+
+        <Label layoutX="50" layoutY="250" text="Assigned Applications:" />
+        <TableView fx:id="assignmentTable" layoutX="50" layoutY="280" prefHeight="140" prefWidth="550">
+            <columns>
+                <TableColumn fx:id="appIdColumn" prefWidth="180" text="Application ID" />
+                <TableColumn fx:id="underwriterColumn" prefWidth="180" text="Underwriter" />
+                <TableColumn fx:id="dateColumn" prefWidth="180" text="Assigned Date" />
+            </columns>
+        </TableView>
+
+        <!-- Navigation Buttons -->
+        <Button layoutX="14.0" layoutY="472.0" onAction="#backButton" text="Back" />
+        <Button layoutX="68.0" layoutY="472.0" onAction="#MainButton" text="Main" />
+      <Label layoutX="51.0" layoutY="116.0" text="Date:" />
+      <DatePicker layoutX="199.0" layoutY="107.0" />
     </children>
 </AnchorPane>
