@@ -3,23 +3,36 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="300" prefWidth="600" xmlns="http://javafx.com/javafx/23.0.1"  xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="com.example.project.ApproveRenewalController">
+<AnchorPane prefHeight="500" prefWidth="800" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.ApproveRenewalController">
 
     <children>
-        <Label layoutX="180" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Approve Renewal" />
+        <Label layoutX="300" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Approve Renewal" />
 
-        <Label layoutX="50" layoutY="70" text="Request ID:" />
-        <TextField fx:id="requestIdField" layoutX="200" layoutY="65" prefWidth="250" />
+        <TableView fx:id="renewalTable" layoutX="69.0" layoutY="56.0" prefHeight="250" prefWidth="642.0">
+            <columns>
+                <TableColumn fx:id="colRequestId" prefWidth="100" text="Request ID" />
+                <TableColumn fx:id="colCustomerName" prefWidth="150" text="Customer Name" />
+                <TableColumn fx:id="colPolicyName" prefWidth="150" text="Policy Name" />
+                <TableColumn fx:id="colExpiryDate" prefWidth="120" text="Expiry Date" />
+                <TableColumn fx:id="colRequestDate" prefWidth="120" text="Requested On" />
+            </columns>
+        </TableView>
 
-        <Label layoutX="50" layoutY="120" text="Decision:" />
-        <ComboBox fx:id="decisionBox" layoutX="200" layoutY="115" prefWidth="250" />
+        <Label layoutX="69.0" layoutY="329.0" text="Request ID:" />
+        <TextField fx:id="requestIdField" editable="false" layoutX="160.0" layoutY="325.0" prefWidth="200" />
 
-        <Button layoutX="200" layoutY="170" onAction="#handleSubmit" text="Submit Decision" />
-        <Label fx:id="resultLabel" layoutX="200" layoutY="220" textFill="green" />
-        <Button layoutX="14.0" layoutY="257.0" onAction="#backButton" text="Back" />
-        <Button layoutX="89.0" layoutY="257.0" onAction="#MainButton" text="Main" />
+        <Label layoutX="422.0" layoutY="330.0" text="Decision:" />
+        <ComboBox fx:id="decisionBox" layoutX="492.0" layoutY="325.0" prefWidth="200" />
+
+        <Button layoutX="371.0" layoutY="368.0" onAction="#handleSubmit" text="Submit Decision" />
+        <Label fx:id="resultLabel" layoutX="320" layoutY="420" textFill="green" />
+
+        <Button layoutX="20" layoutY="460" onAction="#backButton" text="Back" />
+        <Button layoutX="90" layoutY="460" onAction="#MainButton" text="Main" />
     </children>
 </AnchorPane>
