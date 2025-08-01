@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Underwriter.EvaluateRisk">
    <children>
       <Label layoutX="186.0" layoutY="23.0" text="Health Risk Assessment Portal">
@@ -38,5 +37,6 @@
       <Label layoutX="300.0" layoutY="295.0" text="Pending" />
       <ComboBox layoutX="300.0" layoutY="314.0" prefWidth="150.0" promptText="Standard" />
       <Button layoutX="210.0" layoutY="349.0" mnemonicParsing="false" text="Confirm Risk Classification" />
+      <Button layoutX="14.0" layoutY="10.0" mnemonicParsing="false" text="&lt;--" />
    </children>
 </AnchorPane>
