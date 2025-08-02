@@ -1,5 +1,10 @@
 package com.example.life_insurance_main;
 
+import javafx.scene.chart.BarChart;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
+
 public class InsuranceAgentPerformanceSummary
 {
     @javafx.fxml.FXML
