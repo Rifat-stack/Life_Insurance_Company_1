@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.ITAdminCreatNewAccount">
+   <children>
+      <Label layoutX="214.0" layoutY="14.0" text="Create New User Account">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="58.0" text="Full Name:" />
+      <Label layoutX="64.0" layoutY="99.0" text="Email:" />
+      <Label layoutX="61.0" layoutY="134.0" text="Phone:" />
+      <ComboBox layoutX="421.0" layoutY="54.0" prefWidth="150.0" promptText="Account Type:" />
+      <Button layoutX="421.0" layoutY="129.0" mnemonicParsing="false" text="Create Account" />
+      <Button layoutX="421.0" layoutY="94.0" mnemonicParsing="false" text="Regenerate Password" />
+      <Button layoutX="530.0" layoutY="129.0" mnemonicParsing="false" text="Cancel" />
+      <Button layoutX="13.0" layoutY="360.0" mnemonicParsing="false" text="Back To Home" />
+      <Label layoutX="62.0" layoutY="183.0" text="Temporary Password:" />
+      <TextField layoutX="122.0" layoutY="130.0" />
+      <TextField layoutX="122.0" layoutY="54.0" />
+      <TextField layoutX="122.0" layoutY="95.0" />
+      <TextField layoutX="425.0" layoutY="171.0" text="Show confirmation" />
+   </children>
+</AnchorPane>
