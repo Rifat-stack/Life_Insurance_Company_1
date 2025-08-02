@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="496.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.ClaimOfficer.ReviewValidatedClaim">
    <children>
@@ -16,11 +17,16 @@
          </font>
       </Label>
       <Label layoutX="209.0" layoutY="58.0" text="Claim ID:" />
-      <Label layoutX="205.0" layoutY="164.0" text="Claim Amount:" />
-      <Label layoutX="205.0" layoutY="194.0" text="Insured Sum:" />
-      <Label layoutX="205.0" layoutY="224.0" text="Policy Terms Summary:" />
-      <Label layoutX="205.0" layoutY="256.0" text="Exclusions or Wait Periods:" />
+      <Label layoutX="200.0" layoutY="133.0" text="Claim Amount:" />
+      <Label layoutX="204.0" layoutY="162.0" text="Insured Sum:" />
+      <Label layoutX="178.0" layoutY="188.0" text="Policy Terms Summary:" />
+      <Label layoutX="168.0" layoutY="213.0" text="Exclusions or Wait Periods:" />
       <TextField layoutX="257.0" layoutY="54.0" prefHeight="25.0" prefWidth="137.0" />
-      <Button layoutX="251.0" layoutY="91.0" mnemonicParsing="false" text="Load Claim File" />
+      <Button layoutX="248.0" layoutY="90.0" mnemonicParsing="false" text="Load Claim File" />
+      <Label layoutX="215.0" layoutY="248.0" text="Decision:" />
+      <ComboBox layoutX="264.0" layoutY="244.0" prefHeight="25.0" prefWidth="130.0" />
+      <Button layoutX="245.0" layoutY="414.0" mnemonicParsing="false" text="Submit Decision" />
+      <TextArea layoutX="192.0" layoutY="281.0" prefHeight="123.0" prefWidth="207.0" />
+      <Label layoutX="195.0" layoutY="453.0" prefHeight="17.0" prefWidth="201.0" text="Confirmation:" />
    </children>
 </AnchorPane>
