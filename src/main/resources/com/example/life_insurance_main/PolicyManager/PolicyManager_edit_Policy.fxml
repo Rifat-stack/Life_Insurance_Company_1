@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="543.0" prefWidth="600" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.PolicyManager.EditPolicyController">
+    <children>
+        <Label layoutX="200" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Edit Existing Policy" />
+
+        <Label layoutX="88.0" layoutY="325.0" text="Policy ID:" />
+        <TextField fx:id="policyIdField" layoutX="200.0" layoutY="321.0" prefWidth="250" />
+
+        <Label layoutX="87.0" layoutY="360.0" text="New Coverage:" />
+        <TextField fx:id="coverageField" layoutX="200.0" layoutY="356.0" prefWidth="250" />
+
+        <Label layoutX="88.0" layoutY="396.0" text="New Premium:" />
+        <TextField fx:id="premiumField" layoutX="200.0" layoutY="392.0" prefWidth="250" />
+
+        <Button layoutX="224.0" layoutY="429.0" onAction="#handleUpdatePolicy" text="Update" />
+
+        <Label fx:id="resultLabel" layoutX="200" layoutY="270" textFill="green" />
+        <Button layoutX="14.0" layoutY="503.0" onAction="#backButton" text="Back" />
+        <Button layoutX="67.0" layoutY="503.0" onAction="#MainButton" text="Main" />
+      <TableView fx:id="TableView1" layoutX="34.0" layoutY="70.0" prefHeight="200.0" prefWidth="229.0">
+        <columns>
+          <TableColumn fx:id="PolicyId1Table" prefWidth="75.0" text="Policy ID" />
+          <TableColumn fx:id="CoverageTable" prefWidth="75.0" text="Coverage" />
+            <TableColumn fx:id="PremiumTable" prefWidth="75.0" text="Premium" />
+        </columns>
+      </TableView>
+      <TableView fx:id="TableView2" layoutX="300.0" layoutY="70.0" prefHeight="200.0" prefWidth="265.0">
+         <columns>
+            <TableColumn fx:id="PolicyId2Table" prefWidth="75.0" text="Policy ID" />
+            <TableColumn fx:id="NewCoverageTable" prefWidth="94.66668701171875" text="New Coverage" />
+            <TableColumn fx:id="NewPremiumtTable" prefWidth="93.33333333333331" text="New Premium" />
+         </columns>
+      </TableView>
+      <Label fx:id="labletext" layoutX="224.0" layoutY="494.0" prefHeight="27.0" prefWidth="229.0" text="susses text" />
+      <Button layoutX="310.0" layoutY="429.0" onAction="#handleUpdateSystem" text="Confirm Update" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="471.0" prefWidth="650" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.PolicyManager.DefineNewRuleController">
+
+    <children>
+        <Label layoutX="254.0" layoutY="22.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Define New Rule" />
+
+        <Label layoutX="50" layoutY="70" text="Rule Type:" />
+        <ComboBox fx:id="ruleTypeBox" layoutX="200" layoutY="65" prefWidth="250" />
+
+        <Label layoutX="50" layoutY="120" text="Rule Value:" />
+        <TextField fx:id="ruleValueField" layoutX="200" layoutY="115" prefWidth="250" />
+
+        <Button layoutX="200" layoutY="170" onAction="#handleSaveRule" text="Validate Save" />
+        <Label fx:id="confirmationLabel" layoutX="200" layoutY="210" textFill="green" />
+
+        <TableView fx:id="ruleTableView" layoutX="50.0" layoutY="250.0" prefHeight="130.0" prefWidth="550.0">
+            <columns>
+                <TableColumn fx:id="typeColumn" prefWidth="150.0" text="Rule Type" />
+                <TableColumn fx:id="valueColumn" prefWidth="200.0" text="Rule Value" />
+                <TableColumn fx:id="interpretationColumn" prefWidth="200.0" text="Interpretation" />
+            </columns>
+        </TableView>
+
+        <Button layoutX="14.0" layoutY="425.0" onAction="#backButton" text="Back" />
+        <Button layoutX="66.0" layoutY="425.0" onAction="#MainButton" text="Main" />
+    </children>
+</AnchorPane>

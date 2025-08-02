@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="512.0" prefWidth="650" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.PolicyManager.AssignUnderwriterController">
+
+    <children>
+        <Label layoutX="220" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Assign Underwriter" />
+
+        <Label layoutX="50" layoutY="70" text="Application ID:" />
+        <TextField fx:id="applicationIdField" layoutX="200" layoutY="65" prefHeight="25.0" prefWidth="175.0" />
+
+        <Label layoutX="50.0" layoutY="150.0" text="Underwriter:" />
+        <ComboBox fx:id="underwriterBox" layoutX="200.0" layoutY="146.0" prefHeight="25.0" prefWidth="175.0" />
+
+        <Button layoutX="200.0" layoutY="184.0" onAction="#handleAssign" text="Assign" />
+        <Label fx:id="resultLabel" layoutX="200" layoutY="210" textFill="blue" />
+
+        <Label layoutX="50" layoutY="250" text="Assigned Applications:" />
+        <TableView fx:id="assignmentTable" layoutX="50" layoutY="280" prefHeight="140" prefWidth="550">
+            <columns>
+                <TableColumn fx:id="appIdColumn" prefWidth="180" text="Application ID" />
+                <TableColumn fx:id="underwriterColumn" prefWidth="180" text="Underwriter" />
+                <TableColumn fx:id="dateColumn" prefWidth="180" text="Assigned Date" />
+            </columns>
+        </TableView>
+
+        <!-- Navigation Buttons -->
+        <Button layoutX="14.0" layoutY="472.0" onAction="#backButton" text="Back" />
+        <Button layoutX="68.0" layoutY="472.0" onAction="#MainButton" text="Main" />
+      <Label layoutX="51.0" layoutY="116.0" text="Date:" />
+      <DatePicker layoutX="199.0" layoutY="107.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.InsuranceAgentRequestException">
+   <children>
+      <Label layoutX="215.0" layoutY="14.0" text="Request Exception for Customer" />
+      <Label layoutX="172.0" layoutY="55.0" text="Select Customer" />
+      <ComboBox layoutX="286.0" layoutY="51.0" prefWidth="150.0" promptText="Customer ID" />
+      <ComboBox layoutX="286.0" layoutY="100.0" prefWidth="150.0" />
+      <Label layoutX="175.0" layoutY="104.0" text="Exception Type" />
+      <Label layoutX="269.0" layoutY="149.0" text="Justification" />
+      <TextArea layoutX="45.0" layoutY="166.0" prefHeight="85.0" prefWidth="510.0" />
+      <Text layoutX="169.0" layoutY="286.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attach Document" />
+      <Button layoutX="286.0" layoutY="269.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="150.0" text="Choose Documents" />
+      <Button layoutX="256.0" layoutY="328.0" mnemonicParsing="false" text="Send Request" />
+   </children>
+</AnchorPane>
