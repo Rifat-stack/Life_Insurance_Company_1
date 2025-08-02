@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.ToggleButtonGroup?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.InsuranceAgentViewCommisions">
+   <children>
+      <Label layoutX="236.0" layoutY="14.0" text="My Commision">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ToggleButtonGroup layoutX="123.0" layoutY="107.0" selectionType="SINGLE" />
+      <Label layoutX="88.0" layoutY="67.0" text="Filter" />
+      <ComboBox layoutX="127.0" layoutY="63.0" prefWidth="150.0" />
+      <TableView layoutX="43.0" layoutY="115.0" prefHeight="200.0" prefWidth="514.0">
+        <columns>
+          <TableColumn prefWidth="124.0" text="Policy Title" />
+          <TableColumn prefWidth="152.0" text="Customer Name" />
+            <TableColumn minWidth="0.0" prefWidth="109.0" text="Date" />
+            <TableColumn prefWidth="128.0" text="Commission Amount" />
+        </columns>
+      </TableView>
+      <Label layoutX="318.0" layoutY="67.0" text="Sort by" />
+      <ComboBox layoutX="363.0" layoutY="63.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
