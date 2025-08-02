@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="496.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.ClaimOfficer.ReviewValidatedClaim">
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="&lt;--" />
+      <Label layoutX="209.0" layoutY="14.0" text="Review Validated Claim:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="209.0" layoutY="58.0" text="Claim ID:" />
+      <Label layoutX="205.0" layoutY="164.0" text="Claim Amount:" />
+      <Label layoutX="205.0" layoutY="194.0" text="Insured Sum:" />
+      <Label layoutX="205.0" layoutY="224.0" text="Policy Terms Summary:" />
+      <Label layoutX="205.0" layoutY="256.0" text="Exclusions or Wait Periods:" />
+      <TextField layoutX="257.0" layoutY="54.0" prefHeight="25.0" prefWidth="137.0" />
+      <Button layoutX="251.0" layoutY="91.0" mnemonicParsing="false" text="Load Claim File" />
+   </children>
+</AnchorPane>
