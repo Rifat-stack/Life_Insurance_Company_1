@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Representative.RegisterCustomerController">
+    <children>
+        <Label layoutX="200" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Register New Customer" />
+
+        <Label layoutX="50" layoutY="70" text="Customer ID:" />
+        <TextField fx:id="customerIdField" layoutX="200" layoutY="65" prefWidth="300" />
+
+        <Label layoutX="50" layoutY="110" text="Name:" />
+        <TextField fx:id="nameField" layoutX="200" layoutY="105" prefWidth="300" />
+
+        <Label layoutX="50" layoutY="150" text="Phone:" />
+        <TextField fx:id="phoneField" layoutX="200" layoutY="145" prefWidth="300" />
+
+        <Button layoutX="200" layoutY="200" onAction="#handleRegister" text="Register" />
+
+        <Label fx:id="statusLabel" layoutX="200" layoutY="240" textFill="green" />
+      <Label fx:id="Showmessage" layoutX="200.0" layoutY="240.0" prefHeight="27.0" prefWidth="199.0" text="show message" />
+    </children>
+</AnchorPane>

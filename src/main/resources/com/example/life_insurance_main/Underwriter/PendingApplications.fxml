@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Underwriter.PendingApplications">
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="&lt;--" />
+      <Label layoutX="217.0" layoutY="14.0" text="Pending Applications:">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="78.0" layoutY="65.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="198.0" text="Fetch Applications" />
+      <TableView layoutX="36.0" layoutY="104.0" prefHeight="117.0" prefWidth="281.0">
+        <columns>
+          <TableColumn prefWidth="67.99999809265137" text="Name" />
+          <TableColumn prefWidth="72.00003814697266" text="ID" />
+            <TableColumn prefWidth="163.3332977294922" text="Submission Date" />
+        </columns>
+      </TableView>
+      <Button layoutX="137.0" layoutY="242.0" mnemonicParsing="false" text="View details" />
+      <TextArea layoutX="36.0" layoutY="288.0" prefHeight="67.0" prefWidth="281.0" />
+      <ComboBox layoutX="423.0" layoutY="163.0" prefWidth="150.0" promptText="Defer" />
+      <Label layoutX="337.0" layoutY="167.0" text="Select Action:" />
+      <Button layoutX="396.0" layoutY="208.0" mnemonicParsing="false" text="Submit Decision" />
+      <Label layoutX="337.0" layoutY="254.0" prefHeight="25.0" prefWidth="260.0" text="Confirmation or status feedback:" />
+   </children>
+</AnchorPane>

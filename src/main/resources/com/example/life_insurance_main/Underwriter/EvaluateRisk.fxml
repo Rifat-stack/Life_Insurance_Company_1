@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Underwriter.EvaluateRisk">
+   <children>
+      <Label layoutX="186.0" layoutY="10.0" text="Health Risk Assessment Portal">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="104.0" layoutY="67.0" text="ID:" />
+      <TextField layoutX="141.0" layoutY="63.0" />
+      <Label layoutX="244.0" layoutY="105.0" prefHeight="20.0" prefWidth="111.0" text="Health Records:">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="291.0" layoutY="139.0" />
+      <Label layoutX="199.0" layoutY="143.0" text="Name:" />
+      <Label layoutX="204.0" layoutY="173.0" text="Age:" />
+      <Label layoutX="204.0" layoutY="201.0" text="BMI:" />
+      <Label layoutX="193.0" layoutY="240.0" text="Lifestyle:" />
+      <Label layoutX="185.0" layoutY="262.0" text="Medical History:" />
+      <TextField layoutX="291.0" layoutY="169.0" />
+      <TextField layoutX="291.0" layoutY="197.0" />
+      <TextField layoutX="291.0" layoutY="224.0" />
+      <TextField layoutX="291.0" layoutY="258.0" />
+      <Button layoutX="322.0" layoutY="63.0" mnemonicParsing="false" text="Fetch records" />
+      <Label layoutX="191.0" layoutY="295.0" text="System risk rating:" />
+      <Label layoutX="192.0" layoutY="318.0" text="Adjust risk rating:" />
+      <Label layoutX="300.0" layoutY="295.0" text="Pending" />
+      <ComboBox layoutX="300.0" layoutY="314.0" prefWidth="150.0" promptText="Standard" />
+      <Button layoutX="210.0" layoutY="349.0" mnemonicParsing="false" text="Confirm Risk Classification" />
+      <Button layoutX="14.0" layoutY="10.0" mnemonicParsing="false" text="&lt;--" />
+   </children>
+</AnchorPane>
