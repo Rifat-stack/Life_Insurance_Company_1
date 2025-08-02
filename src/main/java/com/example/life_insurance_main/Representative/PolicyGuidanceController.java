@@ -1,4 +1,4 @@
-package com.example.life_insurance_main.representative;
+package com.example.life_insurance_main.Representative;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
@@ -29,5 +29,13 @@ public class PolicyGuidanceController
 
     @javafx.fxml.FXML
     public void handleSearch(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleBack(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleMain(ActionEvent actionEvent) {
     }
 }

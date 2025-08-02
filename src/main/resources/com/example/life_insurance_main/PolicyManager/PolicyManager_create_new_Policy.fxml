@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="471.0" prefWidth="600" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.createnewpolicyController">
+<AnchorPane prefHeight="471.0" prefWidth="600" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.PolicyManager.createnewpolicyController">
 
     <children>
         <Label layoutX="200" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Create New Policy" />

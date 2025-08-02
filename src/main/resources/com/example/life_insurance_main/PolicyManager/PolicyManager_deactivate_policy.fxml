@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="458.0" prefWidth="600" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.DeactivatePolicyController">
+<AnchorPane prefHeight="458.0" prefWidth="600" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.PolicyManager.DeactivatePolicyController">
 
     <children>
         <Label layoutX="217.0" layoutY="14.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Deactivate Policy" />

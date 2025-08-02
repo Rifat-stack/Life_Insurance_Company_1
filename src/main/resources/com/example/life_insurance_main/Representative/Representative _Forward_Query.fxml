@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane  prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.project.ForwardQueryController">
+<AnchorPane  prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Representative.ForwardQueryController">
     <children>
         <Label layoutX="180" layoutY="20" text="Forward Policy Query" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
 
