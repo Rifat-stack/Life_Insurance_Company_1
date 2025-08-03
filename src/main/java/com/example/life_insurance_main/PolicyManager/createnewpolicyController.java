@@ -67,7 +67,7 @@ ArrayList<CreateNewPolicy> createNewPolicies = new ArrayList<>();
         }
 
     }
-
+///
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();

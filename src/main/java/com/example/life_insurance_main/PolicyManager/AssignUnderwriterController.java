@@ -48,7 +48,7 @@ public class AssignUnderwriterController
 
        AssingUnderwriter info = new AssingUnderwriter(
                         applicationIdField.getText(),
-                        datepicker.getValue().toString(),
+                        datepicker.getValue(),
                         underwriterBox.getValue()
                 );
        assingUnderwriters.add(info);

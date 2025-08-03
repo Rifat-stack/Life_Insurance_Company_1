@@ -4,20 +4,20 @@ import java.time.LocalDate;
 
 public class AssingUnderwriter {
     public String id;
-    public String localdate;
+    public LocalDate localdate;
     public String type;
 
-    public AssingUnderwriter(String id, String localdate, String type) {
+    public AssingUnderwriter(String id, LocalDate localdate, String type) {
         this.id = id;
         this.localdate = localdate;
         this.type = type;
     }
 
-    public String getLocaldate() {
+    public LocalDate getLocaldate() {
         return localdate;
     }
 
-    public void setLocaldate(String localdate) {
+    public void setLocaldate(LocalDate localdate) {
         this.localdate = localdate;
     }
 
