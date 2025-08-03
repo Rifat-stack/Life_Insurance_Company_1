@@ -6,7 +6,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="583.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.InsuranceAgentDashboard">
    <children>
       <Label layoutX="24.0" layoutY="14.0" prefHeight="20.0" prefWidth="160.0" text="Insurance Agent">
@@ -28,9 +27,10 @@
       <Button layoutX="25.0" layoutY="213.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Application Status" />
       <Button layoutX="25.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Commision earnings" />
       <Button layoutX="25.0" layoutY="282.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Exception request" />
-      <Button layoutX="25.0" layoutY="315.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Button" />
-      <Button layoutX="25.0" layoutY="352.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Button" />
+      <Button layoutX="25.0" layoutY="315.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Expiring Policies" />
+      <Button layoutX="25.0" layoutY="352.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Performance Summary" />
       <Line endX="376.0" layoutX="104.0" layoutY="15.0" startX="-126.0" />
       <Line endX="376.5" layoutX="104.0" layoutY="87.0" startX="-125.5" />
+      <Button layoutX="372.0" layoutY="40.0" mnemonicParsing="false" text="Sign Out" />
    </children>
 </AnchorPane>

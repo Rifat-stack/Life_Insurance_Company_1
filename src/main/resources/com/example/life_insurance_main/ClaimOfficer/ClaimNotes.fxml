@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="478.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.ClaimOfficer.ClaimNotes">
+   <children>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="&lt;--" />
+      <Label layoutX="246.0" layoutY="14.0" text="Claims Notes: ">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="214.0" layoutY="66.0" text="Claim ID:" />
+      <TextField layoutX="274.0" layoutY="62.0" prefHeight="25.0" prefWidth="137.0" />
+      <Button layoutX="274.0" layoutY="102.0" mnemonicParsing="false" text="Search" />
+      <Label layoutX="214.0" layoutY="142.0" text="Claim Info:" />
+      <Label layoutX="214.0" layoutY="170.0" text="Applicant Name: " />
+      <Label layoutX="214.0" layoutY="200.0" text="Claim Date:" />
+      <Label layoutX="212.0" layoutY="233.0" text="Claim Status:" />
+      <DatePicker layoutX="278.0" layoutY="196.0" prefHeight="25.0" prefWidth="137.0" />
+      <Label layoutX="169.0" layoutY="275.0" text="Write Internal Notes:" />
+      <TextArea layoutX="281.0" layoutY="275.0" prefHeight="87.0" prefWidth="234.0" />
+      <Button layoutX="263.0" layoutY="382.0" mnemonicParsing="false" text="Submit Note" />
+      <Label layoutX="210.0" layoutY="433.0" prefHeight="17.0" prefWidth="189.0" text="Confirmation:" />
+   </children>
+</AnchorPane>
