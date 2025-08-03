@@ -34,8 +34,7 @@
 
         <!-- Navigation Buttons -->
         <Button layoutX="14.0" layoutY="472.0" onAction="#backButton" text="Back" />
-        <Button layoutX="68.0" layoutY="472.0" onAction="#MainButton" text="Main" />
       <Label layoutX="51.0" layoutY="116.0" text="Date:" />
-      <DatePicker layoutX="199.0" layoutY="107.0" />
+      <DatePicker fx:id="datepicker" layoutX="199.0" layoutY="107.0" />
     </children>
 </AnchorPane>

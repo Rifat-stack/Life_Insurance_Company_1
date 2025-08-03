@@ -33,6 +33,5 @@
         <Label fx:id="resultLabel" layoutX="320" layoutY="420" textFill="green" />
 
         <Button layoutX="20" layoutY="460" onAction="#backButton" text="Back" />
-        <Button layoutX="90" layoutY="460" onAction="#MainButton" text="Main" />
     </children>
 </AnchorPane>

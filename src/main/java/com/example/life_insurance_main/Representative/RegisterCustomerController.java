@@ -16,6 +16,14 @@ public class RegisterCustomerController
     private Label statusLabel;
     @javafx.fxml.FXML
     private TextField phoneField;
+    @javafx.fxml.FXML
+    private TableColumn nametable;
+    @javafx.fxml.FXML
+    private TableView TavleView;
+    @javafx.fxml.FXML
+    private TableColumn dtable;
+    @javafx.fxml.FXML
+    private TableColumn numbertable;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -23,5 +31,9 @@ public class RegisterCustomerController
 
     @javafx.fxml.FXML
     public void handleRegister(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void backButton(ActionEvent actionEvent) {
     }
 }

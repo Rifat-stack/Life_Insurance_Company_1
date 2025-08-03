@@ -20,7 +20,6 @@
 
         <Label fx:id="statusLabel" layoutX="200" layoutY="180" textFill="blue" />
         <Button layoutX="14.0" layoutY="360.0" onAction="#backButton" text="Back" />
-        <Button layoutX="61.0" layoutY="360.0" onAction="#MainButton" text="Main" />
         <TableView fx:id="ARIdTable" layoutX="466.0" layoutY="47.0" prefHeight="200.0" prefWidth="78.0">
             <columns>
                 <TableColumn fx:id="ARIdListTable" prefWidth="75.0" text="applied id" />
