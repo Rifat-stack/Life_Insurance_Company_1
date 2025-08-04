@@ -22,15 +22,13 @@
         <Button layoutX="200" layoutY="170" onAction="#handleSaveRule" text="Validate Save" />
         <Label fx:id="confirmationLabel" layoutX="200" layoutY="210" textFill="green" />
 
-        <TableView fx:id="ruleTableView" layoutX="50.0" layoutY="250.0" prefHeight="130.0" prefWidth="550.0">
+        <TableView fx:id="ruleTableView" layoutX="162.0" layoutY="236.0" prefHeight="130.0" prefWidth="325.0">
             <columns>
                 <TableColumn fx:id="typeColumn" prefWidth="150.0" text="Rule Type" />
-                <TableColumn fx:id="valueColumn" prefWidth="200.0" text="Rule Value" />
-                <TableColumn fx:id="interpretationColumn" prefWidth="200.0" text="Interpretation" />
+                <TableColumn fx:id="valueColumn" prefWidth="168.00001525878906" text="Rule Value" />
             </columns>
         </TableView>
 
         <Button layoutX="14.0" layoutY="425.0" onAction="#backButton" text="Back" />
-        <Button layoutX="66.0" layoutY="425.0" onAction="#MainButton" text="Main" />
     </children>
 </AnchorPane>

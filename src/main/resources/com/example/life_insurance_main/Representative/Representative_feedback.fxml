@@ -9,19 +9,20 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Representative.InitiateFeedbackController">
     <children>
-        <Label layoutX="180" layoutY="20" text="Customer Feedback" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        <Label layoutX="180" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Customer Feedback" />
 
         <Label layoutX="50" layoutY="70" text="Customer ID:" />
-        <TextField fx:id="customerIdField" layoutX="180" layoutY="65" prefWidth="300"/>
+        <TextField fx:id="customerIdField" layoutX="180" layoutY="65" prefWidth="300" />
 
         <Label layoutX="50" layoutY="120" text="Feedback Type:" />
-        <ComboBox fx:id="feedbackTypeBox" layoutX="180" layoutY="115" prefWidth="300"/>
+        <ComboBox fx:id="feedbackTypeBox" layoutX="180" layoutY="115" prefWidth="300" />
 
         <Label layoutX="50" layoutY="170" text="Feedback:" />
-        <TextArea fx:id="feedbackInputArea" layoutX="180" layoutY="165" prefWidth="300" prefHeight="80"/>
+        <TextArea fx:id="feedbackInputArea" layoutX="180" layoutY="165" prefHeight="80" prefWidth="300" />
 
-        <Button text="Submit Feedback" layoutX="180" layoutY="260" onAction="#handleSubmitFeedback"/>
+        <Button layoutX="180" layoutY="260" onAction="#handleSubmitFeedback" text="Submit Feedback" />
 
-        <Label fx:id="confirmationLabel" layoutX="180" layoutY="310" textFill="green"/>
+        <Label fx:id="confirmationLabel" layoutX="180" layoutY="310" textFill="green" />
+      <Button layoutX="24.0" layoutY="349.0" mnemonicParsing="false" onAction="#BackButton" text="Back" />
     </children>
 </AnchorPane>

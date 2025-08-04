@@ -27,7 +27,7 @@
       <TableView fx:id="TavleView" layoutX="96.0" layoutY="300.0" prefHeight="200.0" prefWidth="408.0">
          <columns>
             <TableColumn fx:id="nametable" prefWidth="179.33328247070312" text="customer name" />
-            <TableColumn fx:id="dtable" prefWidth="91.33331298828125" text="ID" />
+            <TableColumn fx:id="idtable" prefWidth="91.33331298828125" text="ID" />
             <TableColumn fx:id="numbertable" prefWidth="136.66668701171875" text="Phone Number" />
          </columns>
       </TableView>
