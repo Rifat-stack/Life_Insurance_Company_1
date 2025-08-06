@@ -1,36 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="603.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Representative.RegisterCustomerController">
+<AnchorPane prefHeight="704.0" prefWidth="716.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Representative.RegisterCustomerController">
+
     <children>
+
         <Label layoutX="200" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Register New Customer" />
 
         <Label layoutX="50" layoutY="70" text="Customer ID:" />
-        <TextField fx:id="customerIdField" layoutX="200" layoutY="65" prefWidth="300" />
+        <TextField fx:id="customerIdField" layoutX="200" layoutY="65" prefWidth="350" />
 
         <Label layoutX="50" layoutY="110" text="Name:" />
-        <TextField fx:id="nameField" layoutX="200" layoutY="105" prefWidth="300" />
+        <TextField fx:id="nameField" layoutX="200" layoutY="105" prefWidth="350" />
 
         <Label layoutX="50" layoutY="150" text="Phone:" />
-        <TextField fx:id="phoneField" layoutX="200" layoutY="145" prefWidth="300" />
+        <TextField fx:id="phoneField" layoutX="200" layoutY="145" prefWidth="350" />
 
-        <Button layoutX="290.0" layoutY="184.0" onAction="#handleRegister" text="Register" />
+        <Label layoutX="50" layoutY="190" text="Email:" />
+        <TextField fx:id="emailField" layoutX="200" layoutY="185" prefWidth="350" />
 
-        <Label fx:id="statusLabel" layoutX="200" layoutY="240" textFill="green" />
-      <Label fx:id="Showmessage" layoutX="46.0" layoutY="195.0" prefHeight="27.0" prefWidth="199.0" text="show message" />
-      <TableView fx:id="TavleView" layoutX="96.0" layoutY="300.0" prefHeight="200.0" prefWidth="408.0">
-         <columns>
-            <TableColumn fx:id="nametable" prefWidth="179.33328247070312" text="customer name" />
-            <TableColumn fx:id="idtable" prefWidth="91.33331298828125" text="ID" />
-            <TableColumn fx:id="numbertable" prefWidth="136.66668701171875" text="Phone Number" />
-         </columns>
-      </TableView>
-      <Button layoutX="26.0" layoutY="550.0" onAction="#backButton" text="Back" />
+        <Label layoutX="50" layoutY="230" text="Date of Birth:" />
+        <DatePicker fx:id="dobPicker" layoutX="200" layoutY="225" prefWidth="350" />
+
+        <Label layoutX="50" layoutY="270" text="Gender:" />
+        <ComboBox fx:id="genderBox" layoutX="200" layoutY="265" prefWidth="350" />
+
+        <Label layoutX="50" layoutY="310" text="Address:" />
+        <TextField fx:id="addressField" layoutX="200" layoutY="305" prefHeight="53.0" prefWidth="350" />
+
+        <Button layoutX="314.0" layoutY="369.0" onAction="#handleRegister" text="Register" />
+
+        <Label fx:id="Showmessage" layoutX="50.0" layoutY="395.0" text="Show Error" textFill="red" />
+        <Label fx:id="statusLabel" layoutX="50.0" layoutY="415.0" text="" textFill="green" />
+
+        <TableView fx:id="TavleView" layoutX="7.0" layoutY="464.0" prefHeight="180.0" prefWidth="673.0">
+            <columns>
+                <TableColumn fx:id="nametable" prefWidth="62.00000286102295" text="ID" />
+                <TableColumn fx:id="idtable" prefWidth="107.33333587646484" text="Name" />
+                <TableColumn fx:id="phonetable" prefWidth="100.66667175292969" text="Phone" />
+                <TableColumn fx:id="emailtable" prefWidth="116.0" text="Email" />
+            <TableColumn fx:id="BirthTable" prefWidth="96.6666259765625" text="Date of Birth" />
+            <TableColumn fx:id="gandertable" prefWidth="56.666656494140625" text="Gander" />
+            <TableColumn fx:id="addresstable" prefWidth="138.6666259765625" text="Address" />
+            </columns>
+        </TableView>
+
+        <Button layoutX="14.0" layoutY="14.0" onAction="#backButton" text="Back" />
+      <RadioButton fx:id="maleradio" layoutX="200.0" layoutY="270.0" mnemonicParsing="false" text="Male" />
+      <RadioButton fx:id="femaleradio" layoutX="254.0" layoutY="270.0" mnemonicParsing="false" text="Female" />
+      <RadioButton fx:id="transeradio" layoutX="323.0" layoutY="271.0" mnemonicParsing="false" text="Transe" />
+
     </children>
 </AnchorPane>

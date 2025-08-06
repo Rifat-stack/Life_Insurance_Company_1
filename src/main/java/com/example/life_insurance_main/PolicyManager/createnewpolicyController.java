@@ -1,6 +1,7 @@
 package com.example.life_insurance_main.PolicyManager;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -50,8 +51,50 @@ ArrayList<CreateNewPolicy> createNewPolicies = new ArrayList<>();
     }
 
 
-    @javafx.fxml.FXML
+    @FXML
     public void SavePolicyButton(ActionEvent actionEvent) {
+        if (policyNameField.getText().isEmpty()) {
+            ShowMessages.setText("Enter Your Name");
+            return;
+        }
+        if (coverageField.getText().isEmpty()) {
+            ShowMessages.setText("Enter Your Coverage Value");
+            return;
+        }
+        if (policyIdField.getText().isEmpty()) {
+            ShowMessages.setText("Enter Your ID");
+            return;
+        }
+        if (premiumField.getText().isEmpty()) {
+            ShowMessages.setText("Enter Your Premium");
+            return;
+        }
+       if (datepickerfield.getValue() == null){
+            ShowMessages.setText("Enter Your Policy Date");
+           return;
+       }
+
+        try {
+             Integer.parseInt(premiumField.getText());
+        } catch (NumberFormatException e) {
+            ShowMessages.setText("Premium must be a number.");
+            return;
+        }
+
+        try {
+            Integer.parseInt(coverageField.getText());
+        } catch (NumberFormatException e) {
+            ShowMessages.setText("Coverage must be a number.");
+            return;
+        }
+
+
+     for (CreateNewPolicy info: createNewPolicies){
+       if(policyIdField.getText().equals(info.getId())){
+           ShowMessages.setText("Take a unique ID");
+           return;
+       }}
+
         CreateNewPolicy info = new CreateNewPolicy(
                 policyNameField.getText(),
                 policyIdField.getText(),
@@ -66,17 +109,25 @@ ArrayList<CreateNewPolicy> createNewPolicies = new ArrayList<>();
 
         }
 
+
+        policyNameField.clear();
+        coverageField.clear();
+        policyIdField.clear();
+        premiumField.clear();
+        datepickerfield.setValue(null);
+
     }
-//
-    @javafx.fxml.FXML
-    public void backButton(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("policy_Manager_Dashboard.fxml"));
-        Scene scene = new Scene(root);
-        stage.setTitle("policy_Manager_Dashboard");
-        stage.setScene(scene);
-        stage.show();
-    }
+
+        @FXML
+        public void backButton(ActionEvent actionEvent) throws IOException {
+            Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            Parent root = FXMLLoader.load(getClass().getResource("policy_Manager_Dashboard.fxml"));
+            Scene scene = new Scene(root);
+            stage.setTitle("policy_Manager_Dashboard");
+            stage.setScene(scene);
+            stage.show();
+        }
+
 
 
 }

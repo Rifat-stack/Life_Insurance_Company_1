@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Representative.RepresentativeDashboardController">
+
+    <children>
+
+        <Button layoutX="152.0" layoutY="83.0" mnemonicParsing="false" onAction="#registerNewCustomer" prefHeight="25.0" prefWidth="265.0" text="Register New Customer" />
+
+        <Button layoutX="152.0" layoutY="116.0" mnemonicParsing="false" onAction="#forwardQuery" prefHeight="25.0" prefWidth="265.0" text="Forward Query" />
+
+        <Button layoutX="152.0" layoutY="148.0" mnemonicParsing="false" onAction="#feedback" prefHeight="25.0" prefWidth="265.0" text="Feedback" />
+
+        <Button layoutX="152.0" layoutY="181.0" mnemonicParsing="false" onAction="#submitSupportTicket" prefHeight="25.0" prefWidth="265.0" text="Submit Support Ticket" />
+
+        <Button layoutX="152.0" layoutY="213.0" mnemonicParsing="false" onAction="#checkClaimStatus" prefHeight="25.0" prefWidth="265.0" text="Check Claim Status" />
+
+        <Button layoutX="152.0" layoutY="245.0" mnemonicParsing="false" onAction="#viewCustomerProfile" prefHeight="25.0" prefWidth="265.0" text="View Customer Profile" />
+
+        <Button layoutX="152.0" layoutY="277.0" mnemonicParsing="false" onAction="#viewPaymentHistory" prefHeight="25.0" prefWidth="265.0" text="View Payment History" />
+
+        <Button layoutX="152.0" layoutY="309.0" mnemonicParsing="false" onAction="#providePolicyGuidance" prefHeight="25.0" prefWidth="265.0" text="Provide Policy Guidance" />
+        <Label layoutX="210.0" layoutY="30.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Policy Manager" />
+
+    </children>
+</AnchorPane>

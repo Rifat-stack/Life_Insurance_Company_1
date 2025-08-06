@@ -37,6 +37,31 @@ public class DefineNewRuleController
 
     @javafx.fxml.FXML
     public void handleSaveRule(ActionEvent actionEvent) {
+
+        if(ruleTypeBox.getValue() == null ){
+            confirmationLabel.setText("Select a Type");
+            return;
+        }
+        if(ruleValueField.getText().isEmpty() ){
+            confirmationLabel.setText("Please Mention your Info in the textfield");
+            return;
+        }
+        if (ruleTypeBox.getValue().equals("Age Condition") || ruleTypeBox.getValue().equals("Family Size Limit")){
+            try{Integer.parseInt(ruleValueField.getText());
+            }catch (NumberFormatException e){
+                confirmationLabel.setText("Value must be an integer for Rule Type box");
+                return;
+            }
+
+        } /*else if (ruleTypeBox.getValue().equals("Risky Job")) {
+            try{Integer.parseInt(String.valueOf(ruleValueField));
+            }catch (NumberFormatException e){
+                confirmationLabel.setText("Value must be an String for Rule Type box");
+                return;
+            }
+        }*/
+
+
         DefineNewRule info = new DefineNewRule(
                 ruleTypeBox.getValue(),
                 ruleValueField.getText()
@@ -46,7 +71,8 @@ public class DefineNewRuleController
         for(DefineNewRule inf : defineNewRules){
             ruleTableView.getItems().addAll(inf);
         }
-
+        ruleTypeBox.setValue(null);
+        ruleValueField.clear();
 
     }
 

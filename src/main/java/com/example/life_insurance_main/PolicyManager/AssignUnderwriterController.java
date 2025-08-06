@@ -15,26 +15,29 @@ import java.util.ArrayList;
 public class AssignUnderwriterController
 {
     @javafx.fxml.FXML
-    private TableColumn  < AssingUnderwriter, String>appIdColumn;
+    private TableColumn  <AssignUnderwriter, String>appIdColumn;
     @javafx.fxml.FXML
     private ComboBox < String>underwriterBox;
     @javafx.fxml.FXML
-    private TableView < AssingUnderwriter>assignmentTable;
+    private TableView <AssignUnderwriter>assignmentTable;
     @javafx.fxml.FXML
-    private TableColumn < AssingUnderwriter, String>dateColumn;
+    private TableColumn <AssignUnderwriter, String>dateColumn;
     @javafx.fxml.FXML
-    private TableColumn  < AssingUnderwriter, String>underwriterColumn;
+    private TableColumn  <AssignUnderwriter, String>underwriterColumn;
     @javafx.fxml.FXML
     private TextField applicationIdField;
     @javafx.fxml.FXML
     private Label resultLabel;
-    ArrayList <AssingUnderwriter> assingUnderwriters = new ArrayList<>();
+    ArrayList <AssignUnderwriter> assingUnderwriters = new ArrayList<>();
     @javafx.fxml.FXML
     private DatePicker datepicker;
 
     @javafx.fxml.FXML
     public void initialize() {
-        underwriterBox.getItems().addAll("ALL", "Male", "Female", "TransGender");
+        underwriterBox.getItems().addAll(
+                "Financial Underwriter",
+                "Senior Underwriter",
+                "Junior Underwriter");
 
         appIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("localdate"));
@@ -45,15 +48,37 @@ public class AssignUnderwriterController
 
     @javafx.fxml.FXML
     public void handleAssign(ActionEvent actionEvent) {
+        if (applicationIdField.getText().isEmpty()) {
+            resultLabel.setText("Application ID is required.");
+            return;
+        }
 
-       AssingUnderwriter info = new AssingUnderwriter(
+        if (datepicker.getValue() == null) {
+            resultLabel.setText(" Please select a date.");
+            return;
+        }
+
+        if (underwriterBox.getValue() == null) {
+            resultLabel.setText("Please select an underwriter.");
+            return;
+        }
+
+        for (AssignUnderwriter info: assingUnderwriters){
+            if(applicationIdField.getText().equals(info.getId())){
+                resultLabel.setText("Take a unique ID");
+                return;
+            }}
+
+
+
+       AssignUnderwriter info = new AssignUnderwriter(
                         applicationIdField.getText(),
                         datepicker.getValue(),
                         underwriterBox.getValue()
                 );
        assingUnderwriters.add(info);
         assignmentTable.getItems().clear();
-        for (AssingUnderwriter inf :assingUnderwriters  ){
+        for (AssignUnderwriter inf :assingUnderwriters  ){
             assignmentTable.getItems().addAll(inf);
         }
 

@@ -5,10 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -32,15 +29,37 @@ public class RegisterCustomerController
     @javafx.fxml.FXML
     private TableView<RegisterNewCustomer> TavleView;
     @javafx.fxml.FXML
-    private TableColumn <RegisterNewCustomer, String> numbertable;
-    @javafx.fxml.FXML
     private TableColumn<RegisterNewCustomer, String> idtable;
     ArrayList<RegisterNewCustomer> registerNewCustomers = new ArrayList<>();
+    @javafx.fxml.FXML
+    private TextField emailField;
+    @javafx.fxml.FXML
+    private TableColumn emailtable;
+    @javafx.fxml.FXML
+    private TextField addressField;
+    @javafx.fxml.FXML
+    private DatePicker dobPicker;
+    @javafx.fxml.FXML
+    private ComboBox genderBox;
+    @javafx.fxml.FXML
+    private RadioButton transeradio;
+    @javafx.fxml.FXML
+    private TableColumn addresstable;
+    @javafx.fxml.FXML
+    private TableColumn phonetable;
+    @javafx.fxml.FXML
+    private RadioButton maleradio;
+    @javafx.fxml.FXML
+    private TableColumn BirthTable;
+    @javafx.fxml.FXML
+    private TableColumn gandertable;
+    @javafx.fxml.FXML
+    private RadioButton femaleradio;
 
     @javafx.fxml.FXML
     public void initialize() {
         idtable.setCellValueFactory(new PropertyValueFactory<>("id"));
-        numbertable.setCellValueFactory(new PropertyValueFactory<>("phone"));
+//        numbertable.setCellValueFactory(new PropertyValueFactory<>("phone"));
         nametable.setCellValueFactory(new PropertyValueFactory<>("name"));
     }
 

@@ -29,6 +29,6 @@
             </columns>
         </TableView>
 
-        <Button layoutX="14.0" layoutY="425.0" onAction="#backButton" text="Back" />
+        <Button layoutX="9.0" layoutY="9.0" onAction="#backButton" text="Back" />
     </children>
 </AnchorPane>

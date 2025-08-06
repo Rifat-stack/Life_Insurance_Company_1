@@ -21,7 +21,7 @@
         <ComboBox fx:id="underwriterBox" layoutX="200.0" layoutY="146.0" prefHeight="25.0" prefWidth="175.0" />
 
         <Button layoutX="200.0" layoutY="184.0" onAction="#handleAssign" text="Assign" />
-        <Label fx:id="resultLabel" layoutX="200" layoutY="210" textFill="blue" />
+        <Label fx:id="resultLabel" layoutX="357.0" layoutY="200.0" prefHeight="27.0" prefWidth="155.0" text="show Error" />
 
         <Label layoutX="50" layoutY="250" text="Assigned Applications:" />
         <TableView fx:id="assignmentTable" layoutX="50" layoutY="280" prefHeight="140" prefWidth="550">
