@@ -3,9 +3,9 @@ package com.example.life_insurance_main.PolicyManager;
 import java.time.LocalDate;
 
 public class AssignUnderwriter {
-    public String id;
-    public LocalDate localdate;
-    public String type;
+    private String id;
+    private LocalDate localdate;
+    private String type;
 
     public AssignUnderwriter(String id, LocalDate localdate, String type) {
         this.id = id;

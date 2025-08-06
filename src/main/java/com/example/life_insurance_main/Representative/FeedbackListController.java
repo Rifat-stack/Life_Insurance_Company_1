@@ -3,7 +3,7 @@ package com.example.life_insurance_main.Representative;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 
-public class RepresentativeFeedbackList
+public class FeedbackListController
 {
     @javafx.fxml.FXML
     private TableColumn FeedBackTable;

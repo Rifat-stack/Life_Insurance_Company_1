@@ -31,7 +31,7 @@
         <DatePicker fx:id="dobPicker" layoutX="200" layoutY="225" prefWidth="350" />
 
         <Label layoutX="50" layoutY="270" text="Gender:" />
-        <ComboBox fx:id="genderBox" layoutX="200" layoutY="265" prefWidth="350" />
+
 
         <Label layoutX="50" layoutY="310" text="Address:" />
         <TextField fx:id="addressField" layoutX="200" layoutY="305" prefHeight="53.0" prefWidth="350" />
@@ -39,7 +39,6 @@
         <Button layoutX="314.0" layoutY="369.0" onAction="#handleRegister" text="Register" />
 
         <Label fx:id="Showmessage" layoutX="50.0" layoutY="395.0" text="Show Error" textFill="red" />
-        <Label fx:id="statusLabel" layoutX="50.0" layoutY="415.0" text="" textFill="green" />
 
         <TableView fx:id="TavleView" layoutX="7.0" layoutY="464.0" prefHeight="180.0" prefWidth="673.0">
             <columns>

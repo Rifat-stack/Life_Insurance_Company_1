@@ -41,7 +41,7 @@ public class RepresentativeDashboardController
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("Representative _Register_New_Customer.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Representative _Register_New_Customer");
+        stage.setTitle("Register_New_Customer");
         stage.setScene(scene);
         stage.show();
     }

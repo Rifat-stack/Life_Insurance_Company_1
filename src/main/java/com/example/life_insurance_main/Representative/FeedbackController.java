@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class InitiateFeedbackController
+public class FeedbackController
 {
     @javafx.fxml.FXML
     private TextArea feedbackInputArea;
@@ -26,6 +26,7 @@ public class InitiateFeedbackController
 
     @javafx.fxml.FXML
     public void initialize() {
+
     }
 
     @javafx.fxml.FXML
@@ -42,4 +43,15 @@ public class InitiateFeedbackController
         stage.show();
 
     }
+
+    @javafx.fxml.FXML
+    public void handleSubmitFeedbackList(ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("Representative_feedbackList.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("Feed back List");
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }
