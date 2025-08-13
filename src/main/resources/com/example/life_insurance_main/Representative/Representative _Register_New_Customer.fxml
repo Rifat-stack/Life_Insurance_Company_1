@@ -40,7 +40,7 @@
 
         <Label fx:id="Showmessage" layoutX="50.0" layoutY="395.0" text="Show Error" textFill="red" />
 
-        <TableView fx:id="TavleView" layoutX="7.0" layoutY="464.0" prefHeight="180.0" prefWidth="673.0">
+        <TableView fx:id="TavleView" layoutX="15.0" layoutY="464.0" prefHeight="180.0" prefWidth="673.0">
             <columns>
                 <TableColumn fx:id="nametable" prefWidth="62.00000286102295" text="ID" />
                 <TableColumn fx:id="idtable" prefWidth="107.33333587646484" text="Name" />

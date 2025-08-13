@@ -1,6 +1,8 @@
 package com.example.life_insurance_main.Representative;
 
-public class ForwordQuery {
+import java.io.Serializable;
+
+public class ForwordQuery implements Serializable {
     private String id;
     private String query;
 

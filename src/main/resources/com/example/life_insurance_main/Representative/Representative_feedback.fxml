@@ -3,11 +3,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Representative.FeedbackController">
+<AnchorPane prefHeight="614.0" prefWidth="676.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Representative.FeedbackController">
     <children>
         <Label layoutX="180" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Customer Feedback" />
 
@@ -20,10 +22,18 @@
         <Label layoutX="50" layoutY="170" text="Feedback:" />
         <TextArea fx:id="feedbackInputArea" layoutX="180" layoutY="165" prefHeight="80" prefWidth="300" />
 
-        <Button layoutX="276.0" layoutY="259.0" onAction="#handleSubmitFeedback" text="Submit Feedback" />
+        <Button layoutX="180.0" layoutY="259.0" onAction="#handleSubmitFeedback" text="Submit Feedback" />
 
         <Label fx:id="confirmationLabel" layoutX="180" layoutY="310" textFill="green" />
-      <Button layoutX="24.0" layoutY="349.0" mnemonicParsing="false" onAction="#BackButton" text="Back" />
-      <Button layoutX="455.0" layoutY="349.0" onAction="#handleSubmitFeedbackList" text="View All Feedback" />
+        <TableView fx:id="TableView" layoutX="107.0" layoutY="327.0" prefHeight="200.0" prefWidth="445.0">
+            <columns>
+                <TableColumn fx:id="IDTable" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="FeedBackTypeTable" prefWidth="100.00003051757812" text="FeedBack Type" />
+                <TableColumn fx:id="FeedBackTable" prefWidth="268.00002034505206" text="FeedBack " />
+            </columns>
+        </TableView>
+      <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#BackButton" text="Back" />
+      <Button layoutX="440.0" layoutY="534.0" onAction="#handleSubmitFeedbackList" text="View All Feedback" />
+      <Button layoutX="436.0" layoutY="259.0" onAction="#clear" text="Clear" />
     </children>
 </AnchorPane>

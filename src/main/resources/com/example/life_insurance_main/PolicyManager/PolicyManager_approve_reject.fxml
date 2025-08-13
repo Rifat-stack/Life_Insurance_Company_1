@@ -13,26 +13,25 @@
         <Label layoutX="180" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Approve or Reject Application" />
 
         <Label layoutX="22.0" layoutY="72.0" text="Application ID:" />
-        <TextField fx:id="applicationIdField" layoutX="142.0" layoutY="72.0" prefWidth="250" />
+        <TextField fx:id="applicationIdField" layoutX="113.0" layoutY="68.0" prefWidth="250" />
 
-        <Button layoutX="111.0" layoutY="275.0" onAction="#handleApprove" text="Approve" />
-        <Button layoutX="189.0" layoutY="275.0" onAction="#handleReject" text="Reject" />
+        <Button layoutX="200.0" layoutY="103.0" onAction="#Searchbutton" text="Search" />
+
+        <TableView fx:id="ARInfoTable" layoutX="61.0" layoutY="147.0" prefHeight="172.0" prefWidth="458.0">
+            <columns>
+                <TableColumn fx:id="id" prefWidth="80" text="ID" />
+                <TableColumn fx:id="ARNameTable" prefWidth="120" text="Policy holder" />
+                <TableColumn fx:id="ARPolicyNameTable" prefWidth="100" text="Policy Name" />
+                <TableColumn fx:id="ARCoverageTable" prefWidth="80" text="Coverage" />
+                <TableColumn fx:id="ARPrimiumTable" prefWidth="80" text="Premium" />
+                <TableColumn fx:id="statusColumn" prefWidth="80" text="Status" />
+            </columns>
+        </TableView>
+
+        <Button layoutX="238.0" layoutY="324.0" onAction="#handleApprove" text="Approve" />
+        <Button layoutX="314.0" layoutY="323.0" onAction="#handleReject" text="Reject" />
 
         <Label fx:id="statusLabel" layoutX="200" layoutY="180" textFill="blue" />
         <Button layoutX="14.0" layoutY="360.0" onAction="#backButton" text="Back" />
-        <TableView fx:id="ARIdTable" layoutX="466.0" layoutY="47.0" prefHeight="200.0" prefWidth="78.0">
-            <columns>
-                <TableColumn fx:id="ARIdListTable" prefWidth="75.0" text="applied id" />
-            </columns>
-        </TableView>
-        <TableView fx:id="ARInfoTable" layoutX="69.0" layoutY="123.0" prefHeight="131.0" prefWidth="355.0">
-            <columns>
-                <TableColumn fx:id="ARNameTable" prefWidth="96.66665649414062" text="Policy holder" />
-                <TableColumn fx:id="ARPolicyNameTable" prefWidth="101.33331298828125" text="Policy Name" />
-                <TableColumn fx:id="ARCoverageTable" prefWidth="78.6666259765625" text="Coverage" />
-                <TableColumn fx:id="ARPrimiumTable" prefWidth="78.6666259765625" text="Primium" />
-            </columns>
-        </TableView>
-        <Label layoutX="308.0" layoutY="265.0" prefHeight="46.0" prefWidth="204.0" text="Show susses or error" />
     </children>
 </AnchorPane>

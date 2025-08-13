@@ -51,8 +51,6 @@ public class RegisterCustomerController
     private TableColumn <RegisterNewCustomer, String>gandertable;
     @javafx.fxml.FXML
     private RadioButton femaleradio;
-    @javafx.fxml.FXML
-    private ComboBox genderBox;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -100,11 +98,11 @@ public class RegisterCustomerController
                 Showmessage.setText("Enter a Unique Phone Number");
                 return;
             }}
-        for (RegisterNewCustomer info : registerNewCustomers){
-            if(emailField.getText().equals(info.getEmail())){
-                Showmessage.setText("Enter a Unique email");
-                return;
-            }}
+//        for (RegisterNewCustomer info : registerNewCustomers){
+//            if(emailField.getText().equals(info.getEmail())){
+//                Showmessage.setText("Enter a Unique email");
+//                return;
+//            }}
 
         try {
             Integer.parseInt(phoneField.getText());
@@ -166,9 +164,9 @@ public class RegisterCustomerController
     @javafx.fxml.FXML
     public void backButton(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("policy_Manager_Dashboard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Representative_Dashboard.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("policy_Manager_Dashboard");
+        stage.setTitle("Representative_Dashboard");
         stage.setScene(scene);
         stage.show();
     }

@@ -1,10 +1,17 @@
 package com.example.life_insurance_main.Representative;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class PolicyGuidanceController
 {
@@ -32,10 +39,14 @@ public class PolicyGuidanceController
     }
 
     @javafx.fxml.FXML
-    public void handleBack(ActionEvent actionEvent) {
+    public void handleBack(ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("Representative_Dashboard.fxml"));
+        Scene scene = new Scene(root);
+        stage.setTitle("Representative_Dashboard");
+        stage.setScene(scene);
+        stage.show();
     }
 
-    @javafx.fxml.FXML
-    public void handleMain(ActionEvent actionEvent) {
-    }
+
 }

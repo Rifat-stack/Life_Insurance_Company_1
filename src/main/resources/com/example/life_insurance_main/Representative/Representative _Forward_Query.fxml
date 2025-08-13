@@ -2,11 +2,13 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="350.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Representative.ForwardQueryController">
+<AnchorPane prefHeight="509.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Representative.ForwardQueryController">
     <children>
         <Label layoutX="180" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Forward Policy Query" />
 
@@ -16,9 +18,16 @@
         <Label layoutX="50" layoutY="120" text="Customer Query:" />
         <TextArea fx:id="queryField" layoutX="200" layoutY="115" prefHeight="80" prefWidth="300" />
 
-        <Button layoutX="200" layoutY="210" onAction="#handleForward" text="Forward to Policy Manager" />
+        <Button layoutX="362.0" layoutY="202.0" onAction="#handleForward" prefHeight="25.0" prefWidth="134.0" text="Forward to Policy Manager" />
 
         <Label fx:id="confirmationLabel" layoutX="200" layoutY="260" textFill="green" />
-      <Button layoutX="14.0" layoutY="301.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#backButton" text="Back" />
+      <Button layoutX="204.0" layoutY="202.0" onAction="#AddButton" prefHeight="25.0" prefWidth="134.0" text="Add" />
+      <TableView fx:id="TableView" layoutX="104.0" layoutY="255.0" prefHeight="200.0" prefWidth="403.0">
+        <columns>
+          <TableColumn fx:id="idtable" prefWidth="192.00003051757812" text="Customer ID:" />
+          <TableColumn fx:id="querytable" prefWidth="209.33331298828125" text="Customer Query:" />
+        </columns>
+      </TableView>
     </children>
 </AnchorPane>

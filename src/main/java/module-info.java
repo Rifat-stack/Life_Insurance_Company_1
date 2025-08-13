@@ -1,6 +1,7 @@
 module com.example.life_insurance_main {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.desktop;
 
     // Allow JavaFX to use reflection on controller classes
     opens com.example.life_insurance_main to javafx.fxml;
