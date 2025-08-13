@@ -1,5 +1,6 @@
 package com.example.life_insurance_main.PolicyManager;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 public class CreateNewPolicy {
@@ -7,14 +8,25 @@ public class CreateNewPolicy {
     private String id;
     private int Coverage;
     private int Premium;
-    private LocalDate Validate;
+    private LocalDate date;
+    private String Status;
 
-    public CreateNewPolicy(String name, String id, int premium, int coverage, LocalDate validate) {
+    public CreateNewPolicy(String name, String id, int premium, int coverage, LocalDate date) {
         this.name = name;
         this.id = id;
         Premium = premium;
         Coverage = coverage;
-        Validate = validate;
+        this.date = date;
+        this.Status ="Active";
+
+    }
+
+    public String getStatus() {
+        return Status;
+    }
+
+    public void setStatus(String status) {
+        Status = status;
     }
 
     public String getName() {
@@ -49,11 +61,11 @@ public class CreateNewPolicy {
         Premium = premium;
     }
 
-    public LocalDate getValidate() {
-        return Validate;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setValidate(LocalDate validate) {
-        Validate = validate;
+    public void setDate(LocalDate validate) {
+        date = validate;
     }
 }

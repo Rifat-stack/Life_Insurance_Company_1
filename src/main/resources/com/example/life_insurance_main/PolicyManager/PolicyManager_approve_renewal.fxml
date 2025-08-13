@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="500" prefWidth="800" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.PolicyManager.ApproveRenewalController">
@@ -13,24 +12,21 @@
     <children>
         <Label layoutX="300" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Approve Renewal" />
 
-        <TableView fx:id="renewalTable" layoutX="69.0" layoutY="56.0" prefHeight="250" prefWidth="642.0">
+        <TableView fx:id="renewalTable" layoutX="69.0" layoutY="64.0" prefHeight="250" prefWidth="642.0">
             <columns>
                 <TableColumn fx:id="colRequestId" prefWidth="100" text="Request ID" />
                 <TableColumn fx:id="colCustomerName" prefWidth="150" text="Customer Name" />
-                <TableColumn fx:id="colPolicyName" prefWidth="150" text="Policy Name" />
-                <TableColumn fx:id="colExpiryDate" prefWidth="120" text="Expiry Date" />
-                <TableColumn fx:id="colRequestDate" prefWidth="120" text="Requested On" />
+                <TableColumn fx:id="policynametable" prefWidth="150" text="Policy Name" />
+                <TableColumn fx:id="reqtable" prefWidth="120" text="request" />
+                <TableColumn fx:id="datetable" prefWidth="120" text="date" />
             </columns>
         </TableView>
 
-        <Label layoutX="69.0" layoutY="329.0" text="Request ID:" />
-        <TextField fx:id="requestIdField" editable="false" layoutX="160.0" layoutY="325.0" prefWidth="200" />
+        <Label layoutX="255.0" layoutY="326.0" text="Decision:" />
+        <ComboBox fx:id="decisionBox" layoutX="325.0" layoutY="321.0" prefWidth="200" />
 
-        <Label layoutX="422.0" layoutY="330.0" text="Decision:" />
-        <ComboBox fx:id="decisionBox" layoutX="492.0" layoutY="325.0" prefWidth="200" />
-
-        <Button layoutX="371.0" layoutY="368.0" onAction="#handleSubmit" text="Submit Decision" />
-        <Label fx:id="resultLabel" layoutX="320" layoutY="420" textFill="green" />
+        <Button layoutX="339.0" layoutY="362.0" onAction="#handleSubmit" text="Submit Decision" />
+        <Label fx:id="resultLabel" layoutX="247.0" layoutY="421.0" prefHeight="25.0" prefWidth="306.0" text="Decision" textAlignment="CENTER" textFill="green" />
 
         <Button layoutX="20" layoutY="460" onAction="#backButton" text="Back" />
     </children>

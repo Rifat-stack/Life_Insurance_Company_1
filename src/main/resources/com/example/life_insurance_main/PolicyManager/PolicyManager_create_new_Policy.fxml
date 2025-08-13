@@ -38,5 +38,6 @@
             <TableColumn fx:id="ValidateTable" prefWidth="87.99993896484375" text="Validate" />
         </columns>
       </TableView>
+      <Button layoutX="56.0" layoutY="14.0" onAction="#deactivepagebutton" text="go to deactive page" />
     </children>
 </AnchorPane>

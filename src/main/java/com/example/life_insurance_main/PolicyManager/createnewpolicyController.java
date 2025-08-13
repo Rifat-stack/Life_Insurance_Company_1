@@ -1,5 +1,7 @@
 package com.example.life_insurance_main.PolicyManager;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class createnewpolicyController
@@ -34,19 +37,22 @@ public class createnewpolicyController
     @javafx.fxml.FXML
     private TableColumn <CreateNewPolicy, Integer>PremiumTable;
     @javafx.fxml.FXML
-    private TableColumn  <CreateNewPolicy, Integer>ValidateTable;
+    private TableColumn  <CreateNewPolicy, LocalDate>ValidateTable;
     @javafx.fxml.FXML
     private TableView<CreateNewPolicy> TableView;
     @javafx.fxml.FXML
     private TableColumn <CreateNewPolicy, Integer>CoverageTable;
-ArrayList<CreateNewPolicy> createNewPolicies = new ArrayList<>();
+//ArrayList<CreateNewPolicy> createNewPolicies = new ArrayList<>();
+
+private ObservableList<CreateNewPolicy> createNewPolicies = FXCollections.observableArrayList();
     @javafx.fxml.FXML
     public void initialize() {
         CoverageTable.setCellValueFactory(new PropertyValueFactory<>("Coverage"));
-        ValidateTable.setCellValueFactory(new PropertyValueFactory<>("Validate"));
+        ValidateTable.setCellValueFactory(new PropertyValueFactory<>("date"));
         PremiumTable.setCellValueFactory(new PropertyValueFactory<>("Premium"));
         PolicyidTable.setCellValueFactory(new PropertyValueFactory<>("id"));
         PolicyNameTable.setCellValueFactory(new  PropertyValueFactory<>("name"));
+
 
     }
 
@@ -129,5 +135,16 @@ ArrayList<CreateNewPolicy> createNewPolicies = new ArrayList<>();
         }
 
 
-
+    @FXML
+    public void deactivepagebutton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PolicyManager_deactivate_policy.fxml"));
+        Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+        Parent root = loader.load();
+        DeactivatePolicyController controller = loader .getController();
+        controller.setInfo(createNewPolicies);
+        Scene scene = new Scene(root);
+        stage.setTitle("Deactive_Polic");
+        stage.setScene(scene);
+        stage.show();
+    }
 }

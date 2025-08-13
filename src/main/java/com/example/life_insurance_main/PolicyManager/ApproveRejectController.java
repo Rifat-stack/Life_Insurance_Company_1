@@ -37,9 +37,10 @@ public class ApproveRejectController
     private TableColumn<ApproveandReject,String> ARPrimiumTable;
     @FXML
     private TableColumn <ApproveandReject,String>ARCoverageTable;
-    private ObservableList<ApproveandReject> approbeandrejects;
     @FXML
     private TableColumn <ApproveandReject,String>statusColumn;
+    private ObservableList<ApproveandReject> approbeandrejects;
+
 
 
     @javafx.fxml.FXML
