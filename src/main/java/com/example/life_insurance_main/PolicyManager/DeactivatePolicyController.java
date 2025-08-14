@@ -22,8 +22,6 @@ public class DeactivatePolicyController
     @javafx.fxml.FXML
     private TableColumn <CreateNewPolicy, String>primiumTable;
     @javafx.fxml.FXML
-    private Label resultLabel;
-    @javafx.fxml.FXML
     private TableView <CreateNewPolicy>TableView;
     @javafx.fxml.FXML
     private TableColumn<CreateNewPolicy, String> idtable;
@@ -76,15 +74,15 @@ public void setInfo(ObservableList<CreateNewPolicy> policies){
         this.policies = policies;
     TableView.getItems().setAll(policies);
 }
-    @Deprecated
-    public void MainButton(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("policy_Manager_Dashboard.fxml"));
-        Scene scene = new Scene(root);
-        stage.setTitle("policy_Manager_Dashboard");
-        stage.setScene(scene);
-        stage.show();
-    }
+//    @Deprecated
+//    public void MainButton(ActionEvent actionEvent) throws IOException {
+//        Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+//        Parent root = FXMLLoader.load(getClass().getResource("policy_Manager_Dashboard.fxml"));
+//        Scene scene = new Scene(root);
+//        stage.setTitle("policy_Manager_Dashboard");
+//        stage.setScene(scene);
+//        stage.show();
+//    }
 
     @javafx.fxml.FXML
     public void backtoCreatePolicy(ActionEvent actionEvent) throws IOException {
@@ -98,6 +96,13 @@ public void setInfo(ObservableList<CreateNewPolicy> policies){
 
     @javafx.fxml.FXML
     public void searchbutton(ActionEvent actionEvent) {
+        if (fromdate.getValue() == null){
+            errorfield.setText("Please Enter Date from");
+
+        }
+        if (todate.getValue() == null){
+            errorfield.setText("Please Select last date");
+        }
         for (CreateNewPolicy date : policies){
             if(date.getDate().isEqual(fromdate.getValue()) || date.getDate().isAfter(fromdate.getValue()) &&
             date.getDate().isEqual(todate.getValue()) || date.getDate().isBefore(todate.getValue())){

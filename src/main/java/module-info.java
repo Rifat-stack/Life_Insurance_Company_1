@@ -8,7 +8,10 @@ module com.example.life_insurance_main {
     opens com.example.life_insurance_main.ClaimOfficer to javafx.fxml, java.base;
     opens com.example.life_insurance_main.Underwriter to javafx.fxml, java.base;
     opens com.example.life_insurance_main.PolicyManager to javafx.fxml;
+    opens com.example.life_insurance_main.Representative to javafx.fxml;
 
+
+    exports com.example.life_insurance_main.Representative;
     exports com.example.life_insurance_main;
     exports com.example.life_insurance_main.ITAdmin;
     opens com.example.life_insurance_main.ITAdmin to javafx.fxml;

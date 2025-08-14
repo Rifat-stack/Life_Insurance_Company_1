@@ -25,7 +25,7 @@
             <TableColumn fx:id="quireytable" prefWidth="134.0" text="quirey" />
          </columns>
       </TableView>
-      <TableView fx:id="supporttable" layoutX="36.0" layoutY="279.0" prefHeight="200.0" prefWidth="257.0">
+      <TableView fx:id="supporttable" layoutX="36.0" layoutY="279.0" prefHeight="200.0" prefWidth="295.0">
          <columns>
             <TableColumn fx:id="sidtable" prefWidth="94.6666259765625" text="Policy ID" />
             <TableColumn fx:id="stypetable" prefWidth="77.33334350585938" text="type" />

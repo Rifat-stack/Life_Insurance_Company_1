@@ -22,7 +22,7 @@ public class EditPolicyController
     @javafx.fxml.FXML
     private TableColumn PolicyId1Table;
     @javafx.fxml.FXML
-    private TableColumn PolicyId2Table;
+    private TableColumn <ForwordQuery,String>PolicyId2Table;
     @javafx.fxml.FXML
     private TableColumn PremiumTable;
     @javafx.fxml.FXML
@@ -32,9 +32,9 @@ public class EditPolicyController
     @javafx.fxml.FXML
     private TableView TableView1;
     @javafx.fxml.FXML
-    private TableColumn quireytable;
+    private TableColumn<ForwordQuery,String> quireytable;
     @javafx.fxml.FXML
-    private TableView QuireyTable;
+    private TableView <ForwordQuery>QuireyTable;
     @javafx.fxml.FXML
     private TableColumn <SubmitSupport, String>stypetable;
     @javafx.fxml.FXML
@@ -48,7 +48,9 @@ public class EditPolicyController
     public void initialize() {
         quireytable.setCellValueFactory(new PropertyValueFactory<>("query"));
         PolicyId2Table.setCellValueFactory(new PropertyValueFactory<>("id"));
-
+        stypetable.setCellValueFactory(new PropertyValueFactory<>("type"));
+        sdestable.setCellValueFactory(new PropertyValueFactory<>("text"));
+        sidtable.setCellValueFactory(new PropertyValueFactory<>("id"));
     }
 
     @javafx.fxml.FXML
@@ -61,13 +63,13 @@ public class EditPolicyController
         stage.show();
     }
 
-    @Deprecated
-    public void handleUpdatePolicy(ActionEvent actionEvent) {
-    }
-
-    @Deprecated
-    public void handleUpdateSystem(ActionEvent actionEvent) {
-    }
+//    @Deprecated
+//    public void handleUpdatePolicy(ActionEvent actionEvent) {
+//    }
+//
+//    @Deprecated
+//    public void handleUpdateSystem(ActionEvent actionEvent) {
+//    }
 public void setQuireytable(List<ForwordQuery> forwordQueries){
         QuireyTable.getItems().setAll(forwordQueries);
 }
@@ -80,7 +82,7 @@ public void setsupport(List <SubmitSupport> submitSupports){
     @javafx.fxml.FXML
     public void quireybackButton(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("Representative _Forward_Query.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/life_insurance_main/Representative/Representative _Forward_Query.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("Representative _Forward_Query");
         stage.setScene(scene);
@@ -90,7 +92,7 @@ public void setsupport(List <SubmitSupport> submitSupports){
     @javafx.fxml.FXML
     public void supportbackButton(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("Representative_Submit_Support_Ticket.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/life_insurance_main/Representative/Representative_Submit_Support_Ticket.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("Representative_Submit_Support_Ticket");
         stage.setScene(scene);
