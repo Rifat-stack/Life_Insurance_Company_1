@@ -67,28 +67,37 @@ public class LoginController {
                         stage.setScene(scene);
                         stage.setTitle("Customer Dashboard");
                         stage.show();
-                        return; // stop after successful login//
-                    } else if (id.length() == 8) {
-                        //            login as an Insurance Agent
-                    } else if (id.length() == 7) {
-                        //            login as an UnderWriter
-                    } else if (id.length() == 6) {
-                        //            login as a Claim Officer
-                    } else if (id.length() == 4) {
-                        //            login as a policy manager
-                    } else if (id.length() == 9) {
-                        //            login as a Customer Service representative
-                    } else if (id.length() == 5) {
-                        //            login as a Billing Officer
-                    } else if (id.length() == 3) {
-                        //            login as an IT Admin
-                    } else {
-                        erroralert.setTitle("User ID Error");
-                        erroralert.setContentText("User ID type does not exist.");
-                        erroralert.showAndWait();
+                        return;
                     }
                 }
             }
+            else if (id.length() == 8) {
+                //            login as an Insurance Agent
+            }
+            else if (id.length() == 7) {
+                //            login as an UnderWriter
+            }
+            else if (id.length() == 6) {
+                //            login as a Claim Officer
+            }
+            else if (id.length() == 4) {
+                //            login as a policy manager
+            }
+            else if (id.length() == 9) {
+                //            login as a Customer Service representative
+            }
+            else if (id.length() == 5) {
+                //            login as a Billing Officer
+            }
+            else if (id.length() == 3) {
+                //            login as an IT Admin
+            }
+            else {
+                erroralert.setTitle("User ID Error");
+                erroralert.setContentText("User ID type does not exist.");
+                erroralert.showAndWait();
+            }
+
         }
     }
 }
