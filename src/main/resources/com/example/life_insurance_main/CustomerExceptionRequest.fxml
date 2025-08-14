@@ -9,7 +9,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="491.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.CustomerExceptionRequest">
    <children>
       <Label layoutX="191.0" layoutY="27.0" text="Request an Exception">
@@ -34,5 +33,6 @@
             <Font size="14.0" />
          </font>
       </Button>
+      <Button fx:id="BackButton" layoutX="23.0" layoutY="15.0" mnemonicParsing="false" onAction="#BackOnMouseClick" text="&lt;--" />
    </children>
 </AnchorPane>
