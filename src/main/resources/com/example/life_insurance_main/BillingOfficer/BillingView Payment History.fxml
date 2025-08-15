@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.BillingOfficer.BillingViewPaymentHistory">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.BillingOfficer.BillingViewPaymentHistoryController">
    <children>
       <Label layoutX="196.0" layoutY="14.0" text="Audit Payment History">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TableView layoutX="14.0" layoutY="47.0" prefHeight="200.0" prefWidth="573.0">
+      <TableView fx:id="TableView" layoutX="14.0" layoutY="47.0" prefHeight="200.0" prefWidth="573.0">
         <columns>
-          <TableColumn prefWidth="87.0" text="ID " />
-          <TableColumn prefWidth="104.0" text="Customer" />
-            <TableColumn prefWidth="89.0" text="Date " />
-            <TableColumn prefWidth="94.0" text="Policy" />
-            <TableColumn prefWidth="103.0" text="Amount" />
-            <TableColumn prefWidth="93.0" text="Status" />
+          <TableColumn fx:id="IdTabelCol" prefWidth="87.0" text="ID " />
+          <TableColumn fx:id="CustomerTabelCol" prefWidth="104.0" text="Customer" />
+            <TableColumn fx:id="DateTabelCol" prefWidth="89.0" text="Date " />
+            <TableColumn fx:id="PolicyTabelCol" prefWidth="94.0" text="Policy" />
+            <TableColumn fx:id="AmountTabelCol" prefWidth="103.0" text="Amount" />
+            <TableColumn fx:id="StatusTabelCol" prefWidth="93.0" text="Status" />
         </columns>
       </TableView>
       <Label layoutX="35.0" layoutY="267.0" text="Customer ID:" />
       <Label layoutX="35.0" layoutY="295.0" text="Policy ID: " />
       <Label layoutX="35.0" layoutY="325.0" text="Date Range:" />
-      <Button layoutX="383.0" layoutY="282.0" mnemonicParsing="false" text="EXPORT CONTROLS" />
+      <Button layoutX="383.0" layoutY="282.0" mnemonicParsing="false" onAction="#ExportControlHandleButton" text="EXPORT CONTROLS" />
       <Button layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#BackToHomeHandleButton" text="Back To Home" />
+      <TextField fx:id="CustomerIdTextField" layoutX="106.0" layoutY="263.0" prefHeight="26.0" prefWidth="108.0" />
+      <TextField fx:id="PolicyIdTextField" layoutX="88.0" layoutY="291.0" prefHeight="26.0" prefWidth="108.0" />
+      <DatePicker fx:id="DataRangeDatePicker" layoutX="103.0" layoutY="321.0" prefHeight="26.0" prefWidth="127.0" />
    </children>
 </AnchorPane>
