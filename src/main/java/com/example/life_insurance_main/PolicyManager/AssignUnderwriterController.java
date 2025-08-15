@@ -1,5 +1,6 @@
 package com.example.life_insurance_main.PolicyManager;
 
+import com.example.life_insurance_main.Representative.AppendableObjectOutputStream;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,7 +10,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class AssignUnderwriterController
@@ -33,7 +34,7 @@ public class AssignUnderwriterController
     private DatePicker datepicker;
 
     @javafx.fxml.FXML
-    public void initialize() {
+    public void initialize() throws IOException {
         underwriterBox.getItems().addAll(
                 "Financial Underwriter",
                 "Senior Underwriter",
@@ -43,11 +44,28 @@ public class AssignUnderwriterController
         dateColumn.setCellValueFactory(new PropertyValueFactory<>("localdate"));
         underwriterColumn.setCellValueFactory(new  PropertyValueFactory<>("type"));
 
+File file = new File("underwriter.bin");
+        if (file.exists()){
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+
+            try {
+                while (true){
+                    AssignUnderwriter assignUnderwriter = (AssignUnderwriter) ois.readObject();
+                    assingUnderwriters.add(assignUnderwriter);
+                }
+            }catch (EOFException eof){
+                System.out.println("END");
+            } catch (ClassNotFoundException cmf) {
+                System.out.println("NOT");
+            }
+            assignmentTable.getItems().addAll(assingUnderwriters);
+        }
 
     }
 
     @javafx.fxml.FXML
-    public void handleAssign(ActionEvent actionEvent) {
+    public void handleAssign(ActionEvent actionEvent) throws IOException {
         if (applicationIdField.getText().isEmpty()) {
             resultLabel.setText("Application ID is required.");
             return;
@@ -69,13 +87,25 @@ public class AssignUnderwriterController
                 return;
             }}
 
-
-
        AssignUnderwriter info = new AssignUnderwriter(
                         applicationIdField.getText(),
                         datepicker.getValue(),
                         underwriterBox.getValue()
                 );
+
+
+        File file = new File("underwriter.bin");
+        ObjectOutputStream oos;
+        if (file.exists()){
+            FileOutputStream fis = new FileOutputStream(file, true);
+            oos = new AppendableObjectOutputStream(fis);
+        }else {
+            FileOutputStream fis = new FileOutputStream(file, true);
+            oos = new ObjectOutputStream(fis);
+        }
+        oos.writeObject(info);
+        oos.close();
+
        assingUnderwriters.add(info);
         assignmentTable.getItems().clear();
         for (AssignUnderwriter inf :assingUnderwriters  ){

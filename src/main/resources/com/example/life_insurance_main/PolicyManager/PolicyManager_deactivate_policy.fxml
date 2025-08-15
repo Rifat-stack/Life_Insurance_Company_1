@@ -14,9 +14,7 @@
 
         <Label layoutX="116.0" layoutY="312.0" text="Date Range" />
 
-        <Button layoutX="235.0" layoutY="276.0" onAction="#handleDeactivatePolicy" text="Deactivate and Reload" />
-
-        <Label fx:id="resultLabel" layoutX="200" layoutY="170" textFill="red" />
+        <Button layoutX="235.0" layoutY="276.0" onAction="#handleDeactivatePolicy" text="Deactivate " />
         <Button layoutX="11.0" layoutY="389.0" onAction="#backButton" prefHeight="25.0" prefWidth="135.0" text="Back" />
         <Button layoutX="11.0" layoutY="418.0" onAction="#backtoCreatePolicy" prefHeight="25.0" prefWidth="135.0" text="Back to create Polocy " />
       <TableView fx:id="TableView" layoutX="62.0" layoutY="70.0" prefHeight="200.0" prefWidth="451.0">

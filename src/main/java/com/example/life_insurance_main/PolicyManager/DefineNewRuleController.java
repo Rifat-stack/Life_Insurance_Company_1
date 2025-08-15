@@ -1,5 +1,6 @@
 package com.example.life_insurance_main.PolicyManager;
 
+import com.example.life_insurance_main.Representative.AppendableObjectOutputStream;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -9,7 +10,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 public class DefineNewRuleController
@@ -29,14 +30,30 @@ public class DefineNewRuleController
     ArrayList<DefineNewRule> defineNewRules = new ArrayList<>();
 
     @javafx.fxml.FXML
-    public void initialize() {
+    public void initialize() throws IOException {
         typeColumn.setCellValueFactory(new PropertyValueFactory<>("type"));
         valueColumn.setCellValueFactory(new PropertyValueFactory<>("value"));
         ruleTypeBox.getItems().addAll("Age Condition", "Risky Job", "Family Size Limit");
+
+        File file = new File("DefineRule.bin");
+        if (file.exists()){
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            try {
+                while (true){
+                    DefineNewRule defineNewRule = (DefineNewRule)ois.readObject();
+                    defineNewRules.add(defineNewRule);
+                }
+            } catch (IOException e) {
+                System.out.println("END");
+            } catch (ClassNotFoundException cmf) {
+System.out.println("NOT");            }
+        }
+        ruleTableView.getItems().addAll(defineNewRules);
     }
 
     @javafx.fxml.FXML
-    public void handleSaveRule(ActionEvent actionEvent) {
+    public void handleSaveRule(ActionEvent actionEvent) throws IOException {
 
         if(ruleTypeBox.getValue() == null ){
             confirmationLabel.setText("Select a Type");
@@ -66,6 +83,18 @@ public class DefineNewRuleController
                 ruleTypeBox.getValue(),
                 ruleValueField.getText()
         );
+        File file = new File("DefineRule.bin");
+        ObjectOutputStream oos;
+        if (file.exists()){
+            FileOutputStream fis = new FileOutputStream(file, true);
+            oos = new AppendableObjectOutputStream(fis);
+        }else {
+            FileOutputStream fis = new FileOutputStream(file, true);
+            oos = new ObjectOutputStream(fis);
+        }
+        oos.writeObject(info);
+        oos.close();
+
         defineNewRules.add(info);
         ruleTableView.getItems().clear();
         for(DefineNewRule inf : defineNewRules){

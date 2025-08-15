@@ -23,7 +23,7 @@
         <Button layoutX="152.0" layoutY="277.0" mnemonicParsing="false" onAction="#viewPaymentHistory" prefHeight="25.0" prefWidth="265.0" text="View Payment History" />
 
         <Button layoutX="152.0" layoutY="309.0" mnemonicParsing="false" onAction="#providePolicyGuidance" prefHeight="25.0" prefWidth="265.0" text="Provide Policy Guidance" />
-        <Label layoutX="210.0" layoutY="30.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Policy Manager" />
+        <Label layoutX="160.0" layoutY="26.0" style="-fx-font-size: 20px; -fx-font-weight: bold;" text="Representative Dashboard" />
 
     </children>
 </AnchorPane>

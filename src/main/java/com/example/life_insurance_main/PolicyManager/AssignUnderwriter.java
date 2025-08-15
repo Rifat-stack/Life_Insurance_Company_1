@@ -1,8 +1,9 @@
 package com.example.life_insurance_main.PolicyManager;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class AssignUnderwriter {
+public class AssignUnderwriter implements Serializable {
     private String id;
     private LocalDate localdate;
     private String type;

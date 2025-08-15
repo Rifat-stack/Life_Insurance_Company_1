@@ -1,6 +1,8 @@
 package com.example.life_insurance_main.PolicyManager;
 
-public class DefineNewRule {
+import java.io.Serializable;
+
+public class DefineNewRule implements Serializable {
     private String type;
     private String value;
 

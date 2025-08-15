@@ -44,7 +44,7 @@ public class createnewpolicyController
     private TableColumn <CreateNewPolicy, Integer>CoverageTable;
 //ArrayList<CreateNewPolicy> createNewPolicies = new ArrayList<>();
 
-private ObservableList<CreateNewPolicy> createNewPolicies = FXCollections.observableArrayList();
+public static  ObservableList<CreateNewPolicy> createNewPolicies = FXCollections.observableArrayList();
     @javafx.fxml.FXML
     public void initialize() {
         CoverageTable.setCellValueFactory(new PropertyValueFactory<>("Coverage"));
@@ -108,6 +108,7 @@ private ObservableList<CreateNewPolicy> createNewPolicies = FXCollections.observ
                 Integer.parseInt(coverageField.getText()),
                 datepickerfield.getValue()
         );
+
         createNewPolicies.add(info);
         TableView.getItems().clear();
         for ( CreateNewPolicy inf : createNewPolicies){
