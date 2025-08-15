@@ -30,8 +30,8 @@
 
         <Button layoutX="207.0" layoutY="323.0" onAction="#handleApprove" text="Approve" />
         <Button layoutX="283.0" layoutY="323.0" onAction="#handleReject" prefHeight="25.0" prefWidth="51.0" text="Reject" />
-
-        <Label fx:id="statusLabel" layoutX="200" layoutY="180" textFill="blue" />
         <Button layoutX="14.0" layoutY="360.0" onAction="#backButton" text="Back" />
+
+        <Label fx:id="statusLabel" layoutX="344.0" layoutY="327.0" prefHeight="17.0" prefWidth="175.0" text="messagae" textFill="blue" />
     </children>
 </AnchorPane>

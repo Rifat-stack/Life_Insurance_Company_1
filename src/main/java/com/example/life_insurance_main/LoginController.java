@@ -1,5 +1,6 @@
 package com.example.life_insurance_main;
 
+import com.example.life_insurance_main.PolicyManager.PolicyManagerController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,12 +22,14 @@ public class LoginController {
     private TextField PasswordTextField;
 
     ObservableList<Customer> customerObservableList = FXCollections.observableArrayList();
+//    ObservableList<PolicyManagerController> policyManagers = FXCollections.observableArrayList();
+
 
     @javafx.fxml.FXML
     public void initialize() {
         Customer customer1 = new Customer("1111111111", "Rifat", "admin1@gmail.com", "0000000000", "12222");
         customerObservableList.add(customer1);
-
+//        PolicyManagerController policy = new PolicyManagerController()
     }
 
     @javafx.fxml.FXML
@@ -81,10 +84,22 @@ public class LoginController {
                 //            login as a Claim Officer
             }
             else if (id.length() == 4) {
-                //            login as a policy manager
-            }
-            else if (id.length() == 9) {
-                //            login as a Customer Service representative
+                if ("user5".equals(PasswordTextField.getText())) {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/life_insurance_main/PolicyManager/policy_Manager_Dashboard.fxml"));
+                    Scene scene = new Scene(loader.load());
+                    Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                    stage.setScene(scene);
+                    stage.setTitle("Policy Manager Dashboard");
+                    stage.show();
+                }else if ("user6".equals(PasswordTextField.getText())) {
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/life_insurance_main/Representative/Representative_Dashboard.fxml"));
+                    Scene scene = new Scene(loader.load());
+                    Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                    stage.setScene(scene);
+                    stage.setTitle("Representative Dashboard");
+                    stage.show();
+                }
+
             }
             else if (id.length() == 5) {
                 //            login as a Billing Officer

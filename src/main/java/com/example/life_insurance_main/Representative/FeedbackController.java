@@ -119,7 +119,9 @@ public class FeedbackController
     @javafx.fxml.FXML
     public void clear(ActionEvent actionEvent) {
 
-
+        TableView.getItems().clear();
+        feedbacks.clear();
+        new File("feedback.bin").delete();
     }
 
 }

@@ -20,17 +20,9 @@ import java.util.List;
 public class EditPolicyController
 {
     @javafx.fxml.FXML
-    private TableColumn PolicyId1Table;
-    @javafx.fxml.FXML
     private TableColumn <ForwordQuery,String>PolicyId2Table;
     @javafx.fxml.FXML
-    private TableColumn PremiumTable;
-    @javafx.fxml.FXML
-    private TableColumn CoverageTable;
-    @javafx.fxml.FXML
     private Label resultLabel;
-    @javafx.fxml.FXML
-    private TableView TableView1;
     @javafx.fxml.FXML
     private TableColumn<ForwordQuery,String> quireytable;
     @javafx.fxml.FXML

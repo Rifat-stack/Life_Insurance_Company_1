@@ -16,13 +16,6 @@ public class HelloApplication extends Application {
         stage.setTitle("Login Page");
         stage.setScene(scene);
         stage.show();
-
-//this for Mahamudul fxml test
-//        Parent root = FXMLLoader.load(getClass().getResource("policy_Manager.fxml"));
-//        Scene scene = new Scene(root);
-//        stage.setTitle("Policy Manager!");
-//        stage.setScene(scene);
-//        stage.show();
     }
 
     public static void main(String[] args) {

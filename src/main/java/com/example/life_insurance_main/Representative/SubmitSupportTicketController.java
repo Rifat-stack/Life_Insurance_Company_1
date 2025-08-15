@@ -22,7 +22,7 @@ public class SubmitSupportTicketController
     @javafx.fxml.FXML
     private Label ticketResultLabel;
     @javafx.fxml.FXML
-    private ComboBox issueTypeBox;
+    private ComboBox <String>issueTypeBox;
     @javafx.fxml.FXML
     private TextField customerIdField;
     @javafx.fxml.FXML
