@@ -1,13 +1,16 @@
 package com.example.life_insurance_main;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class USER {
-    private String UserId;
-    private String Name;
+public abstract class USER implements Serializable {
+    public final String UserId;
+    public String Name;
     private String Email;
     private String Phone;
     private String Password;
+
+
 
     public USER(String userId, String name, String email, String phone, String password) {
         UserId = userId;
@@ -21,9 +24,6 @@ public class USER {
         return UserId;
     }
 
-    public void setUserId(String userId) {
-        UserId = userId;
-    }
 
     public String getName() {
         return Name;
@@ -73,6 +73,8 @@ public class USER {
         }
         return false ;
     }
+    protected abstract boolean changeProfileInfo();
+
 }
 
 

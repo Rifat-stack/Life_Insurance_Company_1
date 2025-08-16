@@ -21,16 +21,16 @@
       <Label layoutX="24.0" layoutY="60.0" text="Agent ID :" />
       <Label fx:id="NameLabel" layoutX="84.0" layoutY="44.0" />
       <Label fx:id="AgentLabel" layoutX="84.0" layoutY="60.0" />
-      <Button layoutX="25.0" layoutY="110.0" mnemonicParsing="false" text="Register New customer" />
-      <Button layoutX="25.0" layoutY="144.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Policy List" />
-      <Button layoutX="25.0" layoutY="178.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Search for Customer" />
-      <Button layoutX="25.0" layoutY="213.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Application Status" />
-      <Button layoutX="25.0" layoutY="248.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Commision earnings" />
-      <Button layoutX="25.0" layoutY="282.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Exception request" />
-      <Button layoutX="25.0" layoutY="315.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Expiring Policies" />
-      <Button layoutX="25.0" layoutY="352.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="139.0" text="Performance Summary" />
+      <Button layoutX="25.0" layoutY="110.0" mnemonicParsing="false" onAction="#RegisterNewCustomerOnAction" text="Register New customer" />
+      <Button layoutX="25.0" layoutY="144.0" mnemonicParsing="false" onAction="#PolicyListOnAction" prefHeight="25.0" prefWidth="139.0" text="Policy List" />
+      <Button layoutX="25.0" layoutY="178.0" mnemonicParsing="false" onAction="#SearchForCustomerOnAction" prefHeight="25.0" prefWidth="139.0" text="Search for Customer" />
+      <Button layoutX="25.0" layoutY="213.0" mnemonicParsing="false" onAction="#ExpiringPoliciesOnAction" prefHeight="25.0" prefWidth="139.0" text="Application Status" />
+      <Button layoutX="25.0" layoutY="248.0" mnemonicParsing="false" onAction="#CommisionEarningsOnAction" prefHeight="25.0" prefWidth="139.0" text="Commision earnings" />
+      <Button layoutX="25.0" layoutY="282.0" mnemonicParsing="false" onAction="#ExceptionRequestOnAction" prefHeight="25.0" prefWidth="139.0" text="Exception request" />
+      <Button layoutX="25.0" layoutY="315.0" mnemonicParsing="false" onAction="#ExpiringPoliciesOnAction" prefHeight="25.0" prefWidth="139.0" text="Expiring Policies" />
+      <Button layoutX="25.0" layoutY="352.0" mnemonicParsing="false" onAction="#PerformanceSummaryOnAction" prefHeight="25.0" prefWidth="139.0" text="Performance Summary" />
       <Line endX="376.0" layoutX="104.0" layoutY="15.0" startX="-126.0" />
       <Line endX="376.5" layoutX="104.0" layoutY="87.0" startX="-125.5" />
-      <Button layoutX="372.0" layoutY="40.0" mnemonicParsing="false" text="Sign Out" />
+      <Button layoutX="372.0" layoutY="40.0" mnemonicParsing="false" onAction="#SignOutONAction" text="Sign Out" />
    </children>
 </AnchorPane>

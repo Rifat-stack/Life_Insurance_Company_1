@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.life_insurance_main.InsuranceAgentViewPolicy"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.InsuranceAgentViewPolicy">
+   <children>
+      <TableView fx:id="Tableview" layoutX="108.0" layoutY="65.0" prefHeight="200.0" prefWidth="429.0">
+        <columns>
+          <TableColumn fx:id="PolicyIDCol" prefWidth="90.0" text="PolicyID" />
+            <TableColumn fx:id="PolciyTitleCol" prefWidth="178.0" text="PolicyTitle" />
+            <TableColumn fx:id="PolcietypeCol" prefWidth="170.0" text="PolicType" />
+        </columns>
+      </TableView>
+      <Button layoutX="24.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackONAction" text="&lt;==" />
+   </children>
 </AnchorPane>

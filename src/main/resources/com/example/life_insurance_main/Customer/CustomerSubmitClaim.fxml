@@ -9,7 +9,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="442.0" prefWidth="511.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.CustomerSubmitClaim">
    <children>
       <Label layoutX="68.0" layoutY="76.0" prefHeight="20.0" prefWidth="163.0" text="Submit Insurance Claim">
@@ -31,7 +30,7 @@
       <Label layoutX="69.0" layoutY="224.0" text="Upload Supporting Documents" />
       <Button layoutX="251.0" layoutY="220.0" mnemonicParsing="false" text="Choose File" />
       <Button layoutX="395.0" layoutY="286.0" mnemonicParsing="false" text="Submit" />
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="&lt;--" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackOnAcyion" text="&lt;--" />
       <Line endX="100.0" layoutX="258.0" layoutY="53.0" startX="-100.0" />
       <Line endX="-111.0" endY="152.0" layoutX="169.0" layoutY="96.0" startX="-111.0" startY="13.0" />
       <Line endX="-111.0" endY="152.0" layoutX="457.0" layoutY="100.0" startX="-111.0" startY="13.0" />

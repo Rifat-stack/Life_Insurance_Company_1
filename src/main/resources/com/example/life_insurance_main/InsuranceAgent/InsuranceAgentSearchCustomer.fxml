@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.InsuranceAgentSearchCustomer">
+<AnchorPane prefHeight="553.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.InsuranceAgentSearchCustomer">
    <children>
       <Label layoutX="245.0" layoutY="14.0" text="Search Customer">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="64.0" layoutY="61.0" text="Name" />
-      <TextField layoutX="106.0" layoutY="57.0" />
-      <TextField layoutX="356.0" layoutY="57.0" />
-      <Label layoutX="325.0" layoutY="61.0" text="ID" />
-      <Button layoutX="274.0" layoutY="90.0" mnemonicParsing="false" text="Search" />
-      <TableView layoutX="52.0" layoutY="134.0" prefHeight="165.0" prefWidth="498.0">
+      <TableView fx:id="CusView" layoutX="105.0" layoutY="34.0" prefHeight="260.0" prefWidth="390.0">
         <columns>
-          <TableColumn prefWidth="98.0" text="ID" />
-          <TableColumn prefWidth="294.0" text="Customer Name" />
-            <TableColumn prefWidth="105.0" text="Action" />
+          <TableColumn fx:id="IDtableCol" prefWidth="98.0" text="ID" />
+          <TableColumn fx:id="CustomernameCol" prefWidth="294.0" text="Customer Name" />
+            <TableColumn prefWidth="105.0" />
         </columns>
       </TableView>
-      <Label layoutX="53.0" layoutY="318.0" text="Customer Name" />
-      <Label layoutX="53.0" layoutY="345.0" text="ID" />
-      <Label layoutX="342.0" layoutY="318.0" text="Email Address" />
-      <Label layoutX="342.0" layoutY="344.0" text="Address" />
-      <Label layoutX="50.0" layoutY="374.0" text="Phone Number" />
-      <Label layoutX="342.0" layoutY="372.0" text="Date of Birth" />
-      <Label layoutX="49.0" layoutY="407.0" text="Nomiene Name" />
+      <Label layoutX="59.0" layoutY="347.0" text="Customer Name" />
+      <Label layoutX="59.0" layoutY="374.0" text="ID" />
+      <Label layoutX="348.0" layoutY="347.0" text="Email Address" />
+      <Label layoutX="348.0" layoutY="373.0" text="Address" />
+      <Label layoutX="56.0" layoutY="403.0" text="Phone Number" />
+      <Label layoutX="55.0" layoutY="436.0" text="Nomiene Name" />
+      <ComboBox fx:id="findIDCombo" layoutX="139.0" layoutY="304.0" prefWidth="150.0" />
+      <Label fx:id="NameLabel" layoutX="165.0" layoutY="347.0" prefHeight="17.0" prefWidth="111.0" />
+      <Label fx:id="IdLabel" layoutX="151.0" layoutY="373.0" prefHeight="17.0" prefWidth="111.0" />
+      <Label fx:id="PhoneLabel" layoutX="151.0" layoutY="403.0" prefHeight="17.0" prefWidth="137.0" />
+      <Label fx:id="NomineneLabel" layoutX="151.0" layoutY="436.0" prefHeight="17.0" prefWidth="137.0" />
+      <Label fx:id="EmailLabel" layoutX="434.0" layoutY="347.0" prefHeight="17.0" prefWidth="123.0" />
+      <Label fx:id="AddressLabel" layoutX="409.0" layoutY="373.0" prefHeight="17.0" prefWidth="123.0" />
+      <Button layoutX="360.0" layoutY="304.0" mnemonicParsing="false" onAction="#FindONAction" text="view Detailks" />
+      <Button layoutX="14.0" layoutY="22.0" mnemonicParsing="false" onAction="#BackOnAction" text="&lt;==" />
    </children>
 </AnchorPane>

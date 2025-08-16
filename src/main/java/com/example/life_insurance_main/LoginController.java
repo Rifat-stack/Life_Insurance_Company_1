@@ -1,8 +1,6 @@
 package com.example.life_insurance_main;
 
 import com.example.life_insurance_main.PolicyManager.PolicyManagerController;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -12,8 +10,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.time.LocalDate;
+import java.io.*;
+import java.util.ArrayList;
 
 public class LoginController {
     @javafx.fxml.FXML
@@ -21,14 +19,51 @@ public class LoginController {
     @javafx.fxml.FXML
     private TextField PasswordTextField;
 
-    ObservableList<Customer> customerObservableList = FXCollections.observableArrayList();
-//    ObservableList<PolicyManagerController> policyManagers = FXCollections.observableArrayList();
+
+    ArrayList<Customer> customerList = new ArrayList<>();
+    ArrayList<InsuranceAgent> insuranceAgentList = new ArrayList<>();
+//  ObservableList<PolicyManagerController> policyManagers = FXCollections.observableArrayList();
 
 
     @javafx.fxml.FXML
-    public void initialize() {
-        Customer customer1 = new Customer("1111111111", "Rifat", "admin1@gmail.com", "0000000000", "12222");
-        customerObservableList.add(customer1);
+    public void initialize() throws IOException {
+        File customerfile = new File("Customer.bin");
+        if (!customerfile.exists()){
+            return;
+        }
+        FileInputStream fis = new FileInputStream(customerfile);
+        ObjectInputStream ois = new ObjectInputStream(fis);
+        try {
+            while(true) {
+                Customer customer = (Customer) ois.readObject();
+                customerList.add(customer);
+            }
+        }
+        catch (EOFException eof){
+            System.out.println("s");
+        }
+        catch (ClassNotFoundException cnf){
+            System.out.println("s;");
+        }
+        File Insurancefile = new File("InsuranceAgent.bin");
+        if (!Insurancefile.exists()){
+            return;
+        }
+        FileInputStream file2 = new FileInputStream(Insurancefile);
+        ObjectInputStream out2 = new ObjectInputStream(file2);
+        try {
+            while(true) {
+                InsuranceAgent insuranceagent = (InsuranceAgent) out2.readObject();
+                insuranceAgentList.add(insuranceagent);
+            }
+        }
+        catch (EOFException eof){
+            System.out.println("s");
+        }
+        catch (ClassNotFoundException cnf){
+            System.out.println("s;");
+        }
+
 //        PolicyManagerController policy = new PolicyManagerController()
     }
 
@@ -57,13 +92,12 @@ public class LoginController {
         }
         if (flag) {
             if (id.length() == 10) {
-                for (Customer customer : customerObservableList) {
+                for (Customer customer : customerList) {
                     if (customer.login(id, password)) {
-                        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("CustomerDashboard.fxml"));
+                        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Customer/CustomerDashboard.fxml"));
                         Parent root = fxmlLoader.load();
-
                         CustomerDashboard customerDashboard = fxmlLoader.getController();
-                        CustomerDashboard.setter(customer);
+                        customerDashboard.setter(customer);
 
                         Scene scene = new Scene(root);
                         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
@@ -75,7 +109,21 @@ public class LoginController {
                 }
             }
             else if (id.length() == 8) {
-                //            login as an Insurance Agent
+                for (InsuranceAgent insuranceagent : insuranceAgentList) {
+                    if (insuranceagent.login(id, password)) {
+                        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("InsuranceAgent/InsuranceAgentDashboard.fxml"));
+                        Parent root = fxmlLoader.load();
+                        InsuranceAgentDashboard insuranceAgentDashboard = fxmlLoader.getController();
+                        insuranceAgentDashboard.setter(insuranceagent);
+
+                        Scene scene = new Scene(root);
+                        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                        stage.setScene(scene);
+                        stage.setTitle("Insurance Agent Dashboard");
+                        stage.show();
+                        return;
+                    }
+                }
             }
             else if (id.length() == 7) {
                 //            login as an UnderWriter

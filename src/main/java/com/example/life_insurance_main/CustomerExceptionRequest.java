@@ -20,7 +20,7 @@ public class CustomerExceptionRequest
 
     @javafx.fxml.FXML
     public void BackOnMouseClick(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(CustomerDashboard.class.getResource("CustomerDashboard.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(CustomerDashboard.class.getResource("Customer/CustomerDashboard.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage stage = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setTitle("CustomerDashBoard");

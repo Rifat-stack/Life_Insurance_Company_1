@@ -7,7 +7,6 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="523.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.PolicyApplicationFrom">
    <children>
       <Label layoutX="150.0" layoutY="29.0" text="Insurance Application Form">
@@ -16,15 +15,15 @@
          </font>
       </Label>
       <Label layoutX="128.0" layoutY="84.0" text="Health Declaration" />
-      <ComboBox layoutX="246.0" layoutY="80.0" prefWidth="150.0" />
+      <ComboBox fx:id="healthDeclarationCombo" layoutX="246.0" layoutY="80.0" prefWidth="150.0" />
       <Label layoutX="128.0" layoutY="125.0" text="Health Problems" />
-      <ComboBox layoutX="246.0" layoutY="121.0" prefWidth="150.0" />
+      <ComboBox fx:id="HealthProblemsCombo" layoutX="246.0" layoutY="121.0" prefWidth="150.0" />
       <Label layoutX="128.0" layoutY="184.0" text="Upload Income Proof" />
       <Label layoutX="128.0" layoutY="218.0" text="Upload Medical Report" />
       <Label layoutX="128.0" layoutY="235.0" text="(Last three months)" />
       <Button layoutX="295.0" layoutY="180.0" mnemonicParsing="false" text="Choose File" />
       <Button layoutX="295.0" layoutY="223.0" mnemonicParsing="false" text="Choose File" />
-      <Button layoutX="224.0" layoutY="293.0" mnemonicParsing="false" text="Apply" textAlignment="CENTER">
+      <Button layoutX="224.0" layoutY="293.0" mnemonicParsing="false" onAction="#ApplyOnAction" text="Apply" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -32,5 +31,6 @@
       <Line endX="100.0" layoutX="251.0" layoutY="51.0" startX="-100.0" />
       <Line endX="-18.0" endY="223.0" layoutX="128.0" layoutY="64.0" startX="-18.0" startY="-3.0" />
       <Line endX="-18.0" endY="223.0" layoutX="431.0" layoutY="64.0" startX="-18.0" startY="-3.0" />
+      <Button layoutX="14.0" layoutY="17.0" mnemonicParsing="false" onAction="#BackOnAction" text="&lt;==" />
    </children>
 </AnchorPane>
