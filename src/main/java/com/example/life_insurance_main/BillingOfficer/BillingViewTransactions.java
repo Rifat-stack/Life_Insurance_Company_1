@@ -1,27 +1,81 @@
 package com.example.life_insurance_main.BillingOfficer;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import java.time.LocalDate;
 
-import java.io.IOException;
+public class BillingViewTransactions {
+    private String transactionId;
+    private LocalDate date;
+    private Double amount;
+    private String policyId;
+    private String customerName;
+    private String status;
+    private String paymentMethod;
 
-public class BillingViewTransactions
-{
-    @javafx.fxml.FXML
-    public void initialize() {
+    public BillingViewTransactions(String transactionId, LocalDate date, Double amount, String policyId, String customerName, String status, String paymentMethod) {
+        this.transactionId = transactionId;
+        this.date = date;
+        this.amount = amount;
+        this.policyId = policyId;
+        this.customerName = customerName;
+        this.status = status;
+        this.paymentMethod = paymentMethod;
     }
 
-    @javafx.fxml.FXML
-    public void BackToHomeHandleButton(ActionEvent actionEvent)throws IOException {
-        Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("BillingOfficerDashboard.fxml"));
-        Scene scene = new Scene(root);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+    public String getTransactionId() {
+        return transactionId;
+    }
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public String getPolicyId() {
+        return policyId;
+    }
+
+    public void setPolicyId(String policyId) {
+        this.policyId = policyId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 }
+
+

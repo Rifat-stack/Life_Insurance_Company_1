@@ -1,27 +1,69 @@
 package com.example.life_insurance_main.BillingOfficer;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import java.time.LocalDate;
 
-import java.io.IOException;
+public class BillingViewPendingPayments {
+    private String billId;
+    private String customerName;
+    private LocalDate dueDate;
+    private Double amount;
+    private Integer daysOverdue;
+    private String policyId;
 
-public class BillingViewPendingPayments
-{
-    @javafx.fxml.FXML
-    public void initialize() {
+    public BillingViewPendingPayments(String billId, String customerName, LocalDate dueDate, Double amount, Integer daysOverdue, String policyId) {
+        this.billId = billId;
+        this.customerName = customerName;
+        this.dueDate = dueDate;
+        this.amount = amount;
+        this.daysOverdue = daysOverdue;
+        this.policyId = policyId;
     }
 
-    @javafx.fxml.FXML
-    public void BackToHomeHandleButton(ActionEvent actionEvent)throws IOException {
-        Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("BillingOfficerDashboard.fxml"));
-        Scene scene = new Scene(root);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+    public String getBillId() {
+        return billId;
+    }
+
+    public void setBillId(String billId) {
+        this.billId = billId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public LocalDate getDueDate() {
+        return dueDate;
+    }
+
+    public void setDueDate(LocalDate dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public Integer getDaysOverdue() {
+        return daysOverdue;
+    }
+
+    public void setDaysOverdue(Integer daysOverdue) {
+        this.daysOverdue = daysOverdue;
+    }
+
+    public String getPolicyId() {
+        return policyId;
+    }
+
+    public void setPolicyId(String policyId) {
+        this.policyId = policyId;
     }
 }
