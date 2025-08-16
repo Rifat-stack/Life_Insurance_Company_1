@@ -1,6 +1,7 @@
 package com.example.life_insurance_main.BillingOfficer;
+import java.io.Serializable;
 import java.time.LocalDate;
-public class BillingRefundRequest {
+public class BillingRefundRequest implements Serializable {
     private String refundId;
     private String customerId;
     private String policyId;

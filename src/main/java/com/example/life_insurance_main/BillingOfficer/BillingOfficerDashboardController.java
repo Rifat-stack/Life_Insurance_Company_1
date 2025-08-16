@@ -31,7 +31,7 @@ public class BillingOfficerDashboardController
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("BllingPayoutRequests.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Hello!");
+        stage.setTitle("Billing Payout");
         stage.setScene(scene);
         stage.show();
     }
@@ -41,7 +41,7 @@ public class BillingOfficerDashboardController
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("BillingView Payment History.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Hello!");
+        stage.setTitle("View Payment");
         stage.setScene(scene);
         stage.show();
     }
@@ -61,7 +61,7 @@ public class BillingOfficerDashboardController
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("BillingViewPendingPayments.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Hello!");
+        stage.setTitle("View Pending Payment");
         stage.setScene(scene);
         stage.show();
     }
@@ -71,7 +71,7 @@ public class BillingOfficerDashboardController
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("BillingRefund Requests.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Hello!");
+        stage.setTitle("Refund Request");
         stage.setScene(scene);
         stage.show();
     }
@@ -81,7 +81,7 @@ public class BillingOfficerDashboardController
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("BillingViewTransactions.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Hello!");
+        stage.setTitle("View Transaction");
         stage.setScene(scene);
         stage.show();
     }
@@ -91,7 +91,7 @@ public class BillingOfficerDashboardController
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("BillingBillingReport.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Hello!");
+        stage.setTitle("Billing Report");
         stage.setScene(scene);
         stage.show();
     }

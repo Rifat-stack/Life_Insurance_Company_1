@@ -14,7 +14,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -50,8 +53,9 @@ public class BillingRefundRequestsController
     private ArrayList<BillingRefundRequest> refundRequests = new ArrayList<>();
 
 
+
     @javafx.fxml.FXML
-    public void initialize() {
+    public void initialize()throws IOException {
 
         RefundIdTabbleCol.setCellValueFactory(new PropertyValueFactory<>("refundId"));
         CustomerTabbleCol.setCellValueFactory(new PropertyValueFactory<>("customerId"));
@@ -63,12 +67,24 @@ public class BillingRefundRequestsController
         ProcessingOptionsComBox.getItems().addAll("All Requests", "Pending Only", "Approved Only", "Rejected Only");
         ProcessingOptionsComBox.getSelectionModel().selectFirst();
 
-        refreshTableView();
-    }
-    private void refreshTableView() {
-        TableView.getItems().clear();
+        File file = new File("refundRequests.bin");
+        if (file.exists()){
+            FileInputStream fis = new FileInputStream(file);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            try {
+                while (true){
+                    BillingRefundRequest request = (BillingRefundRequest)ois.readObject();
+                    refundRequests.add(request);
+                }
+            } catch (IOException e) {
+                System.out.println("END");
+            } catch (ClassNotFoundException cmf) {
+                System.out.println("NOT");
+            }
+        }
         TableView.getItems().addAll(refundRequests);
     }
+
 
     @FXML
     public void RejectHandleButton(ActionEvent actionEvent) {
@@ -79,7 +95,7 @@ public class BillingRefundRequestsController
         }
 
         selectedRequest.setStatus("Rejected");
-        refreshTableView();
+//        refreshTableView();
         showError("Request rejected successfully");
     }
 
@@ -105,7 +121,7 @@ public class BillingRefundRequestsController
         }
 
         selectedRequest.setStatus("Approved");
-        refreshTableView();
+ //       refreshTableView();
         showError("Request approved successfully");
     }
     private void showError(String message) {

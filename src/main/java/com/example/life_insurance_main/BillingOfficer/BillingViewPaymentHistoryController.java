@@ -21,25 +21,25 @@ public class BillingViewPaymentHistoryController
     @javafx.fxml.FXML
     private TextField CustomerIdTextField;
     @javafx.fxml.FXML
-    private TableColumn<BillingViewPendingPaymentHistory,String> StatusTabelCol;
+    private TableColumn<BillingViewPaymentHistory,String> StatusTabelCol;
     @javafx.fxml.FXML
-    private TableColumn<BillingViewPendingPaymentHistory,String> IdTabelCol;
+    private TableColumn<BillingViewPaymentHistory,String> IdTabelCol;
     @javafx.fxml.FXML
-    private TableColumn<BillingViewPendingPaymentHistory,String> CustomerTabelCol;
+    private TableColumn<BillingViewPaymentHistory,String> CustomerTabelCol;
     @javafx.fxml.FXML
-    private TableColumn<BillingViewPendingPaymentHistory, LocalDate> DateTabelCol;
+    private TableColumn<BillingViewPaymentHistory, LocalDate> DateTabelCol;
     @javafx.fxml.FXML
     private TextField PolicyIdTextField;
     @javafx.fxml.FXML
-    private TableColumn<BillingViewPendingPaymentHistory,String> PolicyTabelCol;
+    private TableColumn<BillingViewPaymentHistory,String> PolicyTabelCol;
     @javafx.fxml.FXML
-    private TableColumn<BillingViewPendingPaymentHistory,Double> AmountTabelCol;
+    private TableColumn<BillingViewPaymentHistory,Double> AmountTabelCol;
     @javafx.fxml.FXML
-    private TableView<BillingViewPendingPaymentHistory> TableView;
+    private TableView<BillingViewPaymentHistory> TableView;
     @javafx.fxml.FXML
     private DatePicker DataRangeDatePicker;
 
-    private ArrayList<BillingViewPendingPaymentHistory> paymentHistory = new ArrayList<>();
+    private ArrayList<BillingViewPaymentHistory> paymentHistory = new ArrayList<>();
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -65,7 +65,7 @@ public class BillingViewPaymentHistoryController
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("BillingOfficerDashboard.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Hello!");
+        stage.setTitle("Billing View Pyments History");
         stage.setScene(scene);
         stage.show();
     }

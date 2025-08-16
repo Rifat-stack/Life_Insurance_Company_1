@@ -2,7 +2,7 @@ package com.example.life_insurance_main.BillingOfficer;
 
 import java.time.LocalDate;
 
-public class BillingViewPendingPaymentHistory {
+public class BillingViewPaymentHistory {
     private String transactionId;
     private String customerId;
     private LocalDate transactionDate;
@@ -10,7 +10,7 @@ public class BillingViewPendingPaymentHistory {
     private Double amount;
     private String status;
 
-    public BillingViewPendingPaymentHistory(String transactionId, String customerId, LocalDate transactionDate, String policyId, Double amount, String status) {
+    public BillingViewPaymentHistory(String transactionId, String customerId, LocalDate transactionDate, String policyId, Double amount, String status) {
         this.transactionId = transactionId;
         this.customerId = customerId;
         this.transactionDate = transactionDate;
