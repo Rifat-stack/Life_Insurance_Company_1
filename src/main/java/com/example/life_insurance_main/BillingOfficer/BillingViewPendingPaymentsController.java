@@ -98,7 +98,7 @@ public class BillingViewPendingPaymentsController
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("BillingOfficerDashboard.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Hello!");
+        stage.setTitle("View Pending Payment");
         stage.setScene(scene);
         stage.show();
     }

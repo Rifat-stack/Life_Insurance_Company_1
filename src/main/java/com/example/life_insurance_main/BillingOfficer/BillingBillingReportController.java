@@ -49,7 +49,7 @@ public class BillingBillingReportController
         Stage stage = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("BillingOfficerDashboard.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Billing Officer Dashboard!");
+        stage.setTitle("Billing Report");
         stage.setScene(scene);
         stage.show();
     }
