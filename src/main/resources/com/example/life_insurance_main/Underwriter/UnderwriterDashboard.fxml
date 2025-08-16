@@ -6,25 +6,25 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="485.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.life_insurance_main.Underwriter.UnderwriterDashboard">
    <children>
-      <Label layoutX="205.0" layoutY="41.0" prefHeight="25.0" prefWidth="183.0" text="  Underwriter Dashboard">
+      <Label fx:id="dBLabel" layoutX="205.0" layoutY="41.0" prefHeight="25.0" prefWidth="183.0" text="  Underwriter Dashboard">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Button layoutX="206.0" layoutY="161.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Evaluate new application" />
-      <Button layoutX="205.0" layoutY="195.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text=" Insurance underwriting portal" />
-      <Button layoutX="206.0" layoutY="230.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Policy Applications" />
-      <Button layoutX="207.0" layoutY="266.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Deferred Applications" />
-      <Button layoutX="207.0" layoutY="304.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Applicant Search Screen" />
-      <Button layoutX="208.0" layoutY="343.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Pending Applications" />
-      <Button layoutX="208.0" layoutY="380.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Auto-Eligible Applications" />
-      <Button layoutX="208.0" layoutY="416.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="183.0" text="Request Medical Exam" />
+      <Button fx:id="evaluateNewApplicationButton" layoutX="206.0" layoutY="161.0" mnemonicParsing="false" onAction="#evaluateNewApplicationOA" prefHeight="25.0" prefWidth="183.0" text="Evaluate new application" />
+      <Button fx:id="insuranceUnderwritingPortalButton" layoutX="205.0" layoutY="195.0" mnemonicParsing="false" onAction="#insuranceUnderwritingPortalOA" prefHeight="25.0" prefWidth="183.0" text=" Insurance underwriting portal" />
+      <Button fx:id="policyApplicationsButton" layoutX="206.0" layoutY="230.0" mnemonicParsing="false" onAction="#policyApplicationsOA" prefHeight="25.0" prefWidth="183.0" text="Policy Applications" />
+      <Button fx:id="deferredApplicationsButton" layoutX="207.0" layoutY="266.0" mnemonicParsing="false" onAction="#deferredApplicationsOA" prefHeight="25.0" prefWidth="183.0" text="Deferred Applications" />
+      <Button fx:id="applicantSearchScreenButton" layoutX="207.0" layoutY="304.0" mnemonicParsing="false" onAction="#applicantSearchScreenOA" prefHeight="25.0" prefWidth="183.0" text="Applicant Search Screen" />
+      <Button fx:id="pendingApplicationsButton" layoutX="208.0" layoutY="343.0" mnemonicParsing="false" onAction="#pendingApplicationsOA" prefHeight="25.0" prefWidth="183.0" text="Pending Applications" />
+      <Button fx:id="autoEligibleButton" layoutX="208.0" layoutY="380.0" mnemonicParsing="false" onAction="#autoEligibleOA" prefHeight="25.0" prefWidth="183.0" text="Auto-Eligible Applications" />
+      <Button fx:id="requestMedicalExamButton" layoutX="208.0" layoutY="416.0" mnemonicParsing="false" onAction="#requestMedicalExamOA" prefHeight="25.0" prefWidth="183.0" text="Request Medical Exam" />
       <Label layoutX="200.0" layoutY="89.0" text="Name:" />
       <Label layoutX="204.0" layoutY="123.0" text="ID:" />
-      <TextField layoutX="235.0" layoutY="85.0" />
-      <TextField layoutX="234.0" layoutY="119.0" />
+      <TextField fx:id="nameTF" layoutX="235.0" layoutY="85.0" />
+      <TextField fx:id="idTF" layoutX="234.0" layoutY="119.0" />
+      <Button fx:id="signOutButton" layoutX="528.0" layoutY="14.0" mnemonicParsing="false" onAction="#signOutOA" text="Sign out" />
    </children>
 </AnchorPane>
