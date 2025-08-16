@@ -1,23 +1,18 @@
 package com.example.life_insurance_main.BillingOfficer;
 
+import com.example.life_insurance_main.Representative.AppendableObjectOutputStream;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -47,11 +42,10 @@ public class BillingRefundRequestsController
     private TableColumn<BillingRefundRequest, LocalDate> RequestDateTabbleCol;
     @javafx.fxml.FXML
     private TableView<BillingRefundRequest> TableView;
-    @FXML
-    private Text errorTextField;
 
     private ArrayList<BillingRefundRequest> refundRequests = new ArrayList<>();
-
+    @FXML
+    private Label errorTextField;
 
 
     @javafx.fxml.FXML
@@ -128,5 +122,20 @@ public class BillingRefundRequestsController
         errorTextField.setText(message);
     }
 
+
+    @FXML
+    public void SaveRefundRequestHandleButton(ActionEvent actionEvent)throws IOException {
+        File file = new File("refundRequests.bin");
+        ObjectOutputStream oos;
+        if (file.exists()){
+            FileOutputStream fis = new FileOutputStream(file, true);
+            oos = new AppendableObjectOutputStream(fis);
+        }else {
+            FileOutputStream fis = new FileOutputStream(file, true);
+            oos = new ObjectOutputStream(fis);
+        }
+        oos.writeObject("request");
+        oos.close();
+    }
 
 }
