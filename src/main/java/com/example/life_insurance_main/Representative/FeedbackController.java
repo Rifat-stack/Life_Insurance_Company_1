@@ -20,7 +20,7 @@ public class FeedbackController
     @javafx.fxml.FXML
     private Label confirmationLabel;
     @javafx.fxml.FXML
-    private ComboBox feedbackTypeBox;
+    private ComboBox <String> feedbackTypeBox;
     @javafx.fxml.FXML
     private TextField customerIdField;
     @javafx.fxml.FXML
@@ -64,6 +64,19 @@ public class FeedbackController
 
     @javafx.fxml.FXML
     public void handleSubmitFeedback(ActionEvent actionEvent) throws IOException {
+        if (customerIdField.getText().isEmpty()){
+            confirmationLabel.setText("Enter your ID");
+            return;
+        }
+        if (feedbackTypeBox.getValue() == null){
+            confirmationLabel.setText("Enter your Type");
+            return;
+        }
+        if (feedbackInputArea.getText().isEmpty()){
+            confirmationLabel.setText("Enter your Feedback");
+            return;
+        }
+
         Feedback info = new Feedback(
                 customerIdField.getText(),
                 feedbackTypeBox.getValue().toString(),

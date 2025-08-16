@@ -67,6 +67,14 @@ public class SubmitSupportTicketController
 
     @javafx.fxml.FXML
     public void handleSubmitTicket(ActionEvent actionEvent) throws IOException {
+        if (customerIdField.getText().isEmpty()){
+            ticketResultLabel.setText("Enter your ID");
+            return;
+        }
+        if (descriptionArea.getText().isEmpty()){
+            ticketResultLabel.setText("Enter your Text");
+            return;
+        }
         SubmitSupport submitSupport = new SubmitSupport(
                 customerIdField.getText(),
                 issueTypeBox.getValue().toString(),

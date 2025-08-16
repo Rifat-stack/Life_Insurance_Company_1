@@ -82,6 +82,16 @@ if (file.exists()){
 
     @javafx.fxml.FXML
     public void AddButton(ActionEvent actionEvent) throws IOException {
+        if (customerIdField.getText().isEmpty()){
+            confirmationLabel.setText("Enter your ID");
+            return;
+        }
+        if (queryField.getText().isEmpty()){
+            confirmationLabel.setText("Enter your query");
+            return;
+        }
+
+
         ForwordQuery info = new ForwordQuery(
                 customerIdField.getText(),
                 queryField.getText()
